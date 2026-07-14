@@ -1,0 +1,47 @@
+/* =====================================================
+   MOTYW GLOBALNY — editorial/premium
+   Granat + krem, szeryfowe nagłówki (Fraunces),
+   spokojne tło z delikatnym ziarnem zamiast kratki
+   ===================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,600;0,700;1,400;1,600&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap');
+
+:root {
+    /* kolory */
+    --navy-deep: #1c2c66;        /* granat hero */
+    --accent-blue: #27419e;      /* stonowany błękit królewski */
+    --accent-blue-soft: #dbe1f3;
+    --bg-cream: #f7f3ea;
+    --cream-on-navy: #f5f1e6;    /* tekst na granacie */
+    --text-dark: #171a26;
+    --text-muted: #4d4f5c;
+
+    /* czcionki */
+    --font-display: 'Fraunces', Georgia, serif;
+    --font-body: 'IBM Plex Sans', 'Helvetica Neue', Arial, sans-serif;
+    --font-mono: 'IBM Plex Mono', 'Courier New', monospace;
+}
+
+body {
+    margin: 0;
+    color: var(--text-dark);
+    font-family: var(--font-body);
+
+    /* płaski krem + subtelne ziarno (jak w plakatach z referencji) */
+    background-color: var(--bg-cream);
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3CfeComponentTransfer%3E%3CfeFuncA type='linear' slope='0.05'/%3E%3C/feComponentTransfer%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* nagłówki — elegancka antykwa */
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+
+/* akcent w stylu editorial: <em>słowo</em> = szeryfowa kursywa */
+em {
+    font-family: var(--font-display);
+    font-style: italic;
+    font-weight: inherit;
+}

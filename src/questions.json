@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "question": "Czym jest stwardnienie rozsiane (SM)?",
+    "answer": "Stwardnienie rozsiane to przewlekła choroba autoimmunologiczna, w której układ odpornościowy atakuje osłonki nerwów w mózgu i rdzeniu kręgowym. Przebieg choroby jest bardzo indywidualny — u wielu osób przez lata pozostaje łagodny.",
+    "category": "general"
+  },
+  {
+    "id": 2,
+    "question": "Czy z SM można normalnie pracować?",
+    "answer": "Tak, większość osób z SM kontynuuje pracę zawodową, zwłaszcza przy wcześnie rozpoczętym leczeniu. Czasem pomocne są drobne dostosowania, np. elastyczne godziny pracy lub praca zdalna w okresach gorszego samopoczucia.",
+    "category" : "general"
+  },
+  {
+    "id": 3,
+    "question": "Jak przygotować się do wizyty u neurologa?",
+    "answer": "Warto spisać wcześniej swoje objawy (kiedy się pojawiły, jak długo trwały), listę przyjmowanych leków oraz pytania, które chcesz zadać. Dobrze też zabrać dokumentację z poprzednich badań, np. wyniki rezonansu.",
+    "category" : "general"
+  }
+]

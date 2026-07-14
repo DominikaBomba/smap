@@ -1,0 +1,112 @@
+/* Paleta, czcionki i kratka w tle są zdefiniowane globalnie w index.css */
+
+/* ===== WYSZUKIWARKA PYTAŃ ===== */
+
+.faq {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 56px 24px 96px;
+}
+
+.faq h1 {
+    margin: 0 0 32px;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.faqSearch {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 14px 18px;
+    font-size: 1rem;
+    font-family: inherit;
+    color: var(--text-dark);
+    background-color: #fff;
+    border: 1px solid var(--text-muted);
+    border-radius: 999px;
+    outline: none;
+}
+
+.faqSearch:focus {
+    border-color: var(--accent-blue);
+    box-shadow: 0 0 0 3px var(--accent-blue-soft);
+}
+
+.faqCount {
+    align-self: flex-end;
+    margin: 10px 4px 0;
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    color: var(--text-muted);
+}
+
+/* ===== LISTA PYTAŃ ===== */
+
+.faqResults {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+    margin-top: 16px;
+}
+
+.faqItem {
+    overflow: hidden;
+    background-color: #fdfbf4;
+    border: 1px solid #b9c0d4;
+    border-radius: 4px;
+}
+
+/* niebieski pasek z pytaniem i kategorią */
+.faqItemHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    padding: 12px 20px;
+    background-color: var(--accent-blue);
+}
+
+.faqItemHeader h3 {
+    margin: 0;
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--bg-cream);
+}
+
+/* owalna plakietka kategorii */
+.faqCategory {
+    flex-shrink: 0;
+    padding: 5px 16px;
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    color: var(--text-dark);
+    background-color: var(--bg-cream);
+    border: 2px solid #d64545;
+    border-radius: 999px;
+    white-space: nowrap;
+}
+
+/* treść odpowiedzi */
+.faqItem p {
+    margin: 0;
+    padding: 18px 32px 22px;
+    font-size: 0.95rem;
+    line-height: 1.55;
+    text-align: center;
+    color: #6e3434;
+}
+
+.faqEmpty {
+    padding: 32px 0;
+    text-align: center;
+    color: var(--text-muted);
+}

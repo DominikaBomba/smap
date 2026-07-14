@@ -1,0 +1,418 @@
+/* Paleta i czcionki są zdefiniowane globalnie w index.css */
+
+/* ===== HERO w stylu Sereth: zdjęcie | treść ===== */
+
+header {
+    display: flex;
+    align-items: stretch;
+    min-height: 72vh;
+    background-color: var(--bg-cream);
+    border-bottom: 1px solid var(--navy-deep);
+}
+
+/* lewa połowa — zdjęcie na pełną wysokość */
+.heroImage {
+    flex: 1 1 50%;
+    background-color: var(--accent-blue-soft); /* placeholder zanim wstawisz zdjęcie */
+}
+
+.heroImage img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* prawa połowa — nagłówek, opis, przyciski */
+.heroContent {
+    flex: 1 1 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 28px;
+    padding: 72px 64px;
+    box-sizing: border-box;
+}
+
+.heroContent h1 {
+    margin: 0;
+    font-size: 2.7rem;
+    font-weight: 600;
+    line-height: 1.2;
+    text-align: left;
+    color: var(--navy-deep);
+}
+
+/* podkreślone słowa-akcenty jak "touch lives" w referencji */
+.heroContent h1 u {
+    text-decoration-thickness: 2px;
+    text-underline-offset: 6px;
+}
+
+.heroContent p {
+    margin: 0;
+    max-width: 520px;
+    font-size: 0.95rem;
+    line-height: 1.7;
+    text-align: left;
+    color: var(--text-muted);
+}
+
+/* przyciski-pille: obrysowy + wypełniony (jak VIEW OUR WORK / OUR PERSPECTIVE) */
+.heroButtons {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+}
+
+.btnOutline,
+.btnFilled {
+    padding: 10px 24px;
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    text-decoration: none;
+    white-space: nowrap;
+    border-radius: 999px;
+    border: 1px solid var(--navy-deep);
+}
+
+.btnOutline {
+    color: var(--navy-deep);
+    background-color: transparent;
+}
+
+.btnOutline:hover {
+    background-color: var(--accent-blue-soft);
+}
+
+.btnFilled {
+    color: var(--cream-on-navy);
+    background-color: var(--navy-deep);
+}
+
+.btnFilled:hover {
+    background-color: var(--accent-blue);
+}
+
+/* ===== Pasek statystyk i partnerów pod hero ===== */
+
+.statsBar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    padding: 72px 24px 24px;
+}
+
+.statsBar p {
+    max-width: 720px;
+    margin: 0;
+    font-size: 0.55rem;
+    line-height: 1.65;
+    text-align: center;
+    color: var(--text-muted);
+}
+
+.headerNumbers {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 24px;
+    width: 100%;
+    max-width: 900px;
+}
+
+/* liczba + opisik "najechany" na jej prawy dolny róg */
+.headerNumbers > div {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: center;
+    flex: 1 1 0;
+    min-width: 150px;
+}
+
+.headerNumbers h4 {
+    margin: 0;
+    font-size: 3.4rem;
+    font-weight: 600;
+    line-height: 0.9;
+    letter-spacing: -0.02em;
+    color: var(--accent-blue);
+}
+
+.headerNumbers > div > div {
+    position: relative;      /* opis leży NA liczbie, nie obok */
+    z-index: 1;
+
+    margin-left: -10px;      /* tu reguluje się głębokość "najechania" */
+    margin-top: 20px;
+
+    padding-left: 1px;
+    box-shadow: -15px 0px 10px -7px rgba(28, 44, 102, 0.5);
+    top: -10px;
+    background-color: var(--bg-cream);
+    color: var(--accent-blue);
+    font-size: 0.68rem;
+    font-weight: 600;
+    border-radius: 2px;
+    line-height: 1.25;
+    text-align: left;
+
+}
+
+/* Loga partnerów obok siebie */
+.partners {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 56px;
+}
+
+.partners img {
+    height: 52px;
+    width: auto;
+    object-fit: contain;
+}
+
+/* ===== SEKCJA RAPORT / ANALIZA / WYSZUKIWARKA =====
+   editorial: numeracja 01/02/03 + delikatne linie   */
+
+.reports {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 112px 24px 56px;
+    box-sizing: border-box;
+    counter-reset: pozycja;
+}
+
+.reports h4 {
+    margin: 0 0 16px;
+    font-size: 2.1rem;
+    text-align: left;
+    color: var(--accent-blue);
+}
+
+.reportRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 32px;
+    padding: 26px 4px;
+    border-bottom: 1px solid rgba(39, 65, 158, 0.25);
+}
+
+/* numeracja 01 02 03 w monospace */
+.reportRow::before {
+    counter-increment: pozycja;
+    content: counter(pozycja, decimal-leading-zero);
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    color: var(--accent-blue);
+}
+
+.reportRow h5 {
+    margin: 0;
+    font-family: var(--font-mono);
+    font-size: 0.9rem;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    white-space: nowrap;
+    color: var(--text-dark);
+}
+
+.reportRow > div {
+    flex: 1;
+    font-size: 0.85rem;
+    line-height: 1.5;
+    text-align: right;
+    color: var(--text-muted);
+}
+
+/* ===== SEKCJA "TAK DZIAŁAMY" — karuzela kart ===== */
+
+.whatWeDo {
+    padding: 56px 24px 112px;
+}
+
+.whatWeDo h4 {
+    max-width: 1100px;
+    margin: 0 auto 36px;
+    font-size: 2.1rem;
+    text-align: left;
+    color: var(--accent-blue);
+}
+
+/* poziomo przewijany rząd kart */
+.whatWeDo > div {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+    gap: 32px;
+    max-width: 1100px;
+    margin: 0 auto;
+    overflow-x: auto;
+    padding: 4px 4px 20px;
+    scrollbar-color: var(--accent-blue) var(--accent-blue-soft);
+    scrollbar-width: thin;
+}
+
+.whatWeDo > div::-webkit-scrollbar {
+    height: 5px;
+}
+
+.whatWeDo > div::-webkit-scrollbar-track {
+    background: var(--accent-blue-soft);
+    border-radius: 999px;
+}
+
+.whatWeDo > div::-webkit-scrollbar-thumb {
+    background: var(--accent-blue);
+    border-radius: 999px;
+}
+
+/* pojedyncza karta — stała szerokość, nie kurczy się */
+.whatWeDo > div > div {
+    flex: 0 0 300px;
+}
+
+.whatWeDo a {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    gap: 10px;
+    text-decoration: none;
+    color: var(--text-dark);
+}
+
+/* mała etykieta nad tytułem */
+.cardTag {
+    margin-top: 8px;
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--text-muted);
+}
+
+.whatWeDo img {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    border-radius: 4px;
+    background-color: var(--accent-blue-soft); /* placeholder zanim wstawisz zdjęcia */
+}
+
+/* tytuł karty — szeryfowy, jak w case studies z referencji */
+.whatWeDo h5 {
+    margin: 0;
+    font-size: 1.3rem;
+    font-weight: 600;
+    line-height: 1.25;
+    color: var(--accent-blue);
+}
+
+/* opis pod tytułem */
+.whatWeDo a > div {
+    font-size: 0.88rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+    text-align: left;
+}
+
+.whatWeDo a:hover h5 {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+/* dopisek "Czytaj więcej" na karcie */
+.readMore {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--accent-blue);
+}
+
+.whatWeDo a:hover .readMore {
+    text-decoration: underline;
+}
+
+/* ===== "O MNIE" i "NASZE WARTOŚCI" ===== */
+
+.aboutMe {
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 56px 24px;
+    text-align: center;
+}
+
+.aboutMe h4,
+.values h4 {
+    margin: 0 0 24px;
+    font-size: 2.1rem;
+    color: var(--accent-blue);
+}
+
+.aboutMe p {
+    margin: 0;
+    font-size: 1.02rem;
+    line-height: 1.7;
+    color: var(--text-muted);
+}
+
+.values {
+    padding: 40px 24px 120px;
+    text-align: center;
+}
+
+/* ===== Mobile ===== */
+@media (max-width: 640px) {
+    header {
+        flex-direction: column;
+        min-height: 0;
+    }
+
+    .heroImage {
+        aspect-ratio: 4 / 3;
+    }
+
+    .heroContent {
+        padding: 40px 24px;
+    }
+
+    .heroContent h1 {
+        font-size: 1.9rem;
+    }
+
+    .headerNumbers {
+        flex-direction: column;
+        align-items: center;
+        gap: 28px;
+    }
+
+    .partners {
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    .reportRow {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+
+    .reportRow > div {
+        text-align: left;
+    }
+}

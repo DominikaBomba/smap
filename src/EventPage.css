@@ -1,0 +1,44 @@
+/* ===== PODSTRONA WYDARZENIA ===== */
+
+.eventPage {
+    display: flex;
+    flex-direction: column;
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 48px 24px 96px;
+}
+
+.backLink {
+    align-self: flex-start;
+    margin-bottom: 32px;
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    text-decoration: none;
+    color: var(--accent-blue);
+}
+
+.backLink:hover {
+    text-decoration: underline;
+}
+
+.eventPage img {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border-radius: 8px;
+    background-color: var(--accent-blue-soft); /* placeholder zanim wstawisz zdjęcie */
+}
+
+.eventPage h1 {
+    margin: 32px 0 16px;
+    font-size: 2rem;
+}
+
+.eventPage p {
+    margin: 0 0 16px;
+    font-size: 1rem;
+    line-height: 1.65;
+    color: var(--text-muted);
+}
