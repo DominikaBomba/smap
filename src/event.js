@@ -1,15 +1,10 @@
-/* Wszystkie wydarzenia w jednym miejscu.
-   Klucz obiektu (np. "hba") to jednocześnie adres podstrony: /hba
-   - short: krótki opis widoczny na karcie
-   - full:  pełny opis na podstronie (każdy element tablicy = osobny akapit)
-   Uwaga: w tekstach używamy cudzysłowów typograficznych „ ”,
-   zwykły znak " zakończyłby string w JavaScripcie. */
+import hbaImg from "./assets/hba3.jpg";
 
 export const events = {
     hba: {
         tag: "HBA Warsaw Branch",
         title: "the HBA",
-        image: "",
+        image: hbaImg,
         alt: "photo from the HBA conference",
         short:
             "Nasz projekt na spotkaniu „The Power of Mentoring” — o tym, co powstaje z połączenia mentoringu, współpracy i AI.",

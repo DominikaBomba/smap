@@ -15,7 +15,7 @@ function App() {
 
     return (
         <main className="faq">
-            <h1>Wyszukiwarka pytań</h1>
+            <h1>Wyszukiwarka <em>pytań</em></h1>
 
             <input
                 type="text"
