@@ -1,76 +1,91 @@
-/* Paleta i czcionki są zdefiniowane globalnie w index.css */
-
-/* ===== HERO w stylu Sereth: zdjęcie | treść ===== */
-
-header {
-    display: flex;
-    align-items: stretch;
-    min-height: 72vh;
-    background-color: var(--bg-cream);
-    border-bottom: 1px solid var(--navy-deep);
-}
-header h5{
-    font-style: italic;
-
-}
-
-
-/* lewa połowa — zdjęcie na pełną wysokość */
-.heroImage {
-    flex: 1 1 50%;
-    background-color: var(--accent-blue-soft); /* placeholder zanim wstawisz zdjęcie */
-}
-
-.heroImage img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-/* prawa połowa — nagłówek, opis, przyciski */
 .heroContent {
-    flex: 1 1 50%;
+    position: relative;
+    overflow: hidden;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: flex-start;
-    gap: 28px;
-    padding: 72px 64px;
+    align-items: center;
+    text-align: center;
+    min-height: 72vh;
+    padding: 96px 64px;
     box-sizing: border-box;
 }
 
+.heroContent::before {
+    content: "";
+    position: absolute;
+    inset: -20px;
+    background-image: url("./assets/bg1.png");
+    background-size: cover;
+    background-position: center;
+    filter: blur(6px);
+    z-index: 0;
+}
+
+/* gradient zamiast płaskiej nakładki — u dołu ciemniejszy,
+   dzięki czemu tekst ma kontrast, a tło zachowuje głębię */
+.heroContent::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+            180deg,
+            rgba(28, 44, 102, 0.35) 0%,
+            rgba(28, 44, 102, 0.55) 60%,
+            rgba(28, 44, 102, 0.75) 100%
+    );
+    z-index: 1;
+}
+
+.heroContent > * {
+    position: relative;
+    z-index: 2;
+}
+
+/* mały nadtytuł — nadaje "redakcyjny" charakter */
+.heroEyebrow {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: rgba(250, 247, 240, 0.85);
+    margin-bottom: 18px;
+}
+
 .heroContent h1 {
-    margin: 0;
-    font-size: 2.7rem;
+    margin: 0 0 20px;
+    font-size: clamp(3.2rem, 7vw, 5.5rem);
     font-weight: 600;
-    line-height: 1.2;
-    text-align: left;
-    color: var(--navy-deep);
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    color: #faf7f0;
+    text-shadow: 0 2px 24px rgba(28, 44, 102, 0.45);
 }
 
-/* podkreślone słowa-akcenty jak "touch lives" w referencji */
-.heroContent h1 u {
-    text-decoration-thickness: 2px;
-    text-underline-offset: 6px;
-}
-
-.heroContent p {
+.heroContent p.intro {
     margin: 0;
-    max-width: 520px;
-    font-size: 0.95rem;
-    line-height: 1.7;
-    text-align: left;
-    color: var(--text-muted);
+    max-width: 560px;
+    font-size: 1.05rem;
+    line-height: 1.75;
+    color: rgba(250, 247, 240, 0.92);
 }
 
-/* przyciski-pille: obrysowy + wypełniony (jak VIEW OUR WORK / OUR PERSPECTIVE) */
-.heroButtons {
-    display: flex;
-    gap: 14px;
-    flex-wrap: wrap;
+/* cienka linia oddzielająca podpis */
+.heroDivider {
+    width: 56px;
+    height: 1px;
+    margin: 32px 0 18px;
+    background: rgba(250, 247, 240, 0.6);
 }
 
+.heroByline {
+    margin: 0;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 0.9rem;
+    letter-spacing: 0.06em;
+    color: rgba(250, 247, 240, 0.85);
+}
 .btnOutline,
 .btnFilled {
     padding: 10px 24px;
@@ -194,7 +209,7 @@ header h5{
     width: 100%;
     max-width: 760px;
     margin: 0 auto;
-    padding: 112px 24px 56px;
+
     box-sizing: border-box;
     counter-reset: pozycja;
 }
@@ -205,26 +220,25 @@ header h5{
     text-align: left;
     color: var(--accent-blue);
 }
-
 .reportRow {
     display: flex;
-    justify-content: space-between;
+    flex-direction: row;
     align-items: center;
-    gap: 32px;
+    gap: 5vw;
     padding: 26px 4px;
     border-bottom: 1px solid rgba(39, 65, 158, 0.25);
 }
 
-/* numeracja 01 02 03 w monospace */
 .reportRow::before {
     counter-increment: pozycja;
     content: counter(pozycja, decimal-leading-zero);
-    font-family: var(--font-mono);
+    font-family: var(--font-display);
     font-size: 0.8rem;
     color: var(--accent-blue);
 }
 
 .reportRow h5 {
+    flex: 0 0 20vw;
     margin: 0;
     font-family: var(--font-mono);
     font-size: 0.9rem;
@@ -234,8 +248,24 @@ header h5{
     white-space: nowrap;
     color: var(--text-dark);
 }
+.reportRow span{
+    color: var(--accent-blue);
+    opacity: 0.4;
+}
+.reportRow span:hover{
 
-.reportRow > div {
+    opacity: 1;
+}
+.reportRow > div:first-of-type {
+    flex: 0 0 10vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.reportRow > div:last-of-type {
     flex: 1;
     font-size: 0.85rem;
     line-height: 1.5;
@@ -243,6 +273,22 @@ header h5{
     color: var(--text-muted);
 }
 
+.reportRow .contactInfo {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: max-content;
+    max-width: 240px;
+    margin-top: 8px;
+    padding: 8px 12px;
+    font-size: 0.8rem;
+    background: #fff;
+    border: 1px solid rgba(39, 65, 158, 0.25);
+    border-radius: 6px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    z-index: 10;
+}
 /* ===== SEKCJA "TAK DZIAŁAMY" — karuzela kart ===== */
 
 .whatWeDo {
@@ -390,11 +436,87 @@ header h5{
     color: var(--text-muted);
 }
 
+/* Kontener główny sekcji wartości */
 .values {
-    padding: 40px 24px 120px;
+    padding: 60px 20px;
     text-align: center;
 }
 
+.values h4 {
+    font-size: 2rem;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+.values h4 em {
+    font-style: italic;
+    color: #0056b3;
+}
+
+.values > div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.values > div > div {
+    flex: 1 1 280px;
+    max-width: 350px;
+    background-color: rgba(255,255,255, 0.4);
+    padding: 24px;
+
+    box-shadow: 4px 4px 0px rgba(28, 44, 102, 0.9);
+    border: 1px solid rgb(28, 44, 102);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    text-align: left;
+}
+
+.values > div > div:hover {
+    transform: translateY(-5px);
+    box-shadow: 4px 4px 0px rgba(28, 44, 102, 1);
+}
+
+/* Tytuł wartości (h5) */
+.values h5 {
+    font-size: 1.25rem;
+    margin: 0 0 12px 0;
+    color: #222;
+    font-weight: 600;
+}
+
+/* Opis wartości (p) */
+.values p {
+    font-size: 0.95rem;
+    color: #666;
+    line-height: 1.5;
+    margin: 0;
+}
+.iconButton {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+.reportRow a,
+.reportRow .iconButton {
+    color: inherit;
+    display: inline-flex;
+    text-decoration: none;
+}
+
+/* rozmiar ikonek */
+.reportRow .material-symbols-outlined {
+    font-size: 32px;
+}
+
+.contactInfo {
+    font-size: 0.85rem;
+    margin-top: 0.5rem;
+}
 /* ===== Mobile ===== */
 @media (max-width: 640px) {
     header {

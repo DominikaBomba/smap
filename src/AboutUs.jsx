@@ -4,14 +4,13 @@ import { events } from "./event";
 import "./Aboutus.css";
 import gfrLogo from "./assets/gfr.png";
 import rocheLogo from "./assets/roche_logo.png";
-import human from "./assets/human2.png";
+import human from "./assets/bg1.png";
 
 
 /* Licznik: animuje liczbę od 1 do `end` po załadowaniu strony.
    prefix/suffix pozwalają zachować znaki typu "~" i "h+". */
 function CountUp({ end, prefix = "", suffix = "", duration = 1500 }) {
     const [value, setValue] = useState(1);
-
     useEffect(() => {
         let frame;
         const startTime = performance.now();
@@ -41,26 +40,30 @@ function CountUp({ end, prefix = "", suffix = "", duration = 1500 }) {
 }
 
 function AboutUs() {
-    return (
-        <>
-            <header>
-                {/* lewa połowa: duże zdjęcie (wstaw swoje w src) */}
-                <div className="heroImage">
-                    <img src={human} alt={"zdjęcie zespołu projektu MSEARCH"} />
-                </div>
+    const [showContactInfo, setShowContactInfo] = useState(false);
 
-                {/* prawa połowa: nagłówek + opis + przyciski */}
+    return (
+        <><link
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=download,lock,search"
+            rel="stylesheet"
+        />
+            <header>
+
+
+
                 <div className="heroContent">
-                    <h1> SMap</h1>
+                    <span className="heroEyebrow">Projekt HerStory</span>
+
+                    <h1>SMap</h1>
 
                     <p className="intro">
                         Celem projektu jest pomoc pacjentom ze stwardnieniem rozsianym
                         poprzez etyczne wykorzystanie sztucznej inteligencji.
                     </p>
 
-                    <div className="heroButtons">
-                       <h5>By Dominika Bomba & Paulina Święcicka</h5>
-                    </div>
+                    <div className="heroDivider" />
+
+                    <h5 className="heroByline">Dominika Bomba &amp; Paulina Święcicka</h5>
                 </div>
             </header>
 
@@ -99,38 +102,6 @@ function AboutUs() {
                 </div>
             </section>
 
-            <section className="reports">
-                <h4>Co <em>tworzymy</em>?</h4>
-
-                <div className="reportRow">
-                    <h5>RAPORT</h5>
-                    <div>
-                        <strong>
-                            Potential Areas Where Patients Diagnosed with MS Can Be
-                            Supported by AI
-                        </strong>{" "}
-                        — raport oparty na ponad 13 wywiadach z ekspertami Roche
-                        z neurologii, sztucznej inteligencji i komunikacji.
-                    </div>
-                </div>
-
-                <div className="reportRow">
-                    <h5>ANALIZA</h5>
-                    <div>
-                        Analiza około 3000 zanonimizowanych komentarzy społeczności
-                        SM: o czym pacjenci rozmawiają, czego szukają i co ich
-                        niepokoi. Dostępna dla wybranych organizacji.
-                    </div>
-                </div>
-
-                <div className="reportRow">
-                    <h5>WYSZUKIWARKA</h5>
-                    <div>
-                        Zbiór prawdziwych pytań społeczności SM wraz z odpowiedziami,
-                        w formie prostej wyszukiwarki. Dostępna dla pacjentów.
-                    </div>
-                </div>
-            </section>
 
             <section className="whatWeDo">
                 <h4>Tak <em>działamy</em>:</h4>
@@ -146,6 +117,67 @@ function AboutUs() {
                             </Link>
                         </div>
                     ))}
+                </div>
+            </section>
+            <section className="reports">
+                <h4>Co <em>tworzymy</em>?</h4>
+
+                <div className="reportRow">
+                    <h5>RAPORT</h5>
+                    <div>
+                        <a href="./assets/" download="raport_Smap_june2026.pdf" aria-label="Pobierz raport">
+                            <span className="material-symbols-outlined">download</span>
+                        </a>
+                    </div>
+                    <div>
+                        <strong>
+                            Potential Areas Where Patients Diagnosed with MS Can Be
+                            Supported by AI
+                        </strong>{" "}
+                        — raport oparty na ponad 13 wywiadach z ekspertami Roche
+                        z neurologii, sztucznej inteligencji i komunikacji.
+                    </div>
+                </div>
+
+                <div className="reportRow">
+                    <h5>ANALIZA</h5>
+                    <div>
+                        <button
+                            type="button"
+                            className="iconButton"
+                            onClick={() => setShowContactInfo((prev) => !prev)}
+                            aria-label="Informacja o dostępie do analizy"
+                        >
+                            <span className="material-symbols-outlined">lock</span>
+                        </button>
+                        {showContactInfo && (
+                            <p className="contactInfo">
+                                Dostęp do analizy jest ograniczony — prosimy o kontakt
+                                mailowy:{" "}
+                                <a href="mailto:kontakt@twojadomena.pl">
+                                    ...
+                                </a>
+                            </p>
+                        )}
+                    </div>
+                    <div>
+                        Analiza około 3000 zanonimizowanych komentarzy społeczności
+                        SM: o czym pacjenci rozmawiają, czego szukają i co ich
+                        niepokoi. Dostępna dla wybranych organizacji.
+                    </div>
+                </div>
+
+                <div className="reportRow">
+                    <h5>WYSZUKIWARKA</h5>
+                    <div>
+                        <Link to="/.." aria-label="Przejdź do wyszukiwarki">
+                            <span className="material-symbols-outlined">search</span>
+                        </Link>
+                    </div>
+                    <div>
+                        Zbiór prawdziwych pytań społeczności SM wraz z odpowiedziami,
+                        w formie prostej wyszukiwarki. Dostępna dla pacjentów.
+                    </div>
                 </div>
             </section>
 
@@ -176,8 +208,26 @@ function AboutUs() {
                 <h4>Nasze <em>wartości</em></h4>
 
                 <div>
-                <div> Etyczne użycie AI</div>
+                    <div>
+                        <h5>Etyczne użycie AI</h5>
+                        <p>Szczegółowo werfikujemy i konsultujemy analizy sztucznej inteligencji w pełni dbając o prywatność.</p>
+                    </div>
 
+
+                    <div>
+                        <h5>Dostępność dla każdego</h5>
+                        <p>Tworzymy narzędzia łatwych do użycia i zrozumienia przez każdego</p>
+                    </div>
+
+                    <div>
+                        <h5>Rzetelność</h5>
+                        <p>Opieramy się jedynie na twardych danych oraz wiedzy ekspertów medycznych</p>
+                    </div>
+
+                    <div>
+                        <h5>Współpraca</h5>
+                        <p>Łączymy pokolenia (poprzez mentoring!), technologie i medycynę. </p>
+                    </div>
                 </div>
             </section>
         </>
