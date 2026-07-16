@@ -59,13 +59,7 @@ function AboutUs() {
                     </p>
 
                     <div className="heroButtons">
-                        <Link to="/" className="btnOutline">
-                            Wyszukiwarka
-                        </Link>
-                        {/* podmień href, gdy raport będzie miał swój adres */}
-                        <a href="#" className="btnFilled">
-                            Zobacz raport
-                        </a>
+                       <h5>By Dominika Bomba & Paulina Święcicka</h5>
                     </div>
                 </div>
             </header>
@@ -157,16 +151,34 @@ function AboutUs() {
 
             <section className={"aboutMe"}>
                 <h4> O mnie</h4>
-                <p>
-                    Nazywam się Dominika Bomba. Tworzę projekt, którego celem jest
-                    wsparcie pacjentów ze stwardnieniem rozsianym poprzez etyczne
-                    wykorzystanie sztucznej inteligencji. Na co dzień interesuję się
-                    programowaniem, nowymi technologiami i AI.
-                </p>
+                <div>
+                    <div>
+                        <div> <h4>Dominika Bomba </h4>  <img src={human} alt={"dominika photo"}/></div>
+                        <p> Stworzyłam SMap, którego celem jest
+                        wsparcie pacjentów ze stwardnieniem rozsianym poprzez etyczne
+                        wykorzystanie sztucznej inteligencji. Na co dzień interesuję się
+                        programowaniem, nowymi technologiami i AI.</p>
+
+                    </div>
+                    <div>
+                        <div> <h4> Paulina Święcicka </h4>  <img src={human} alt={"dominika photo"}/></div>
+                        <p> Stworzyłam SMap, którego celem jest
+                            wsparcie pacjentów ze stwardnieniem rozsianym poprzez etyczne
+                            wykorzystanie sztucznej inteligencji. Na co dzień interesuję się
+                            programowaniem, nowymi technologiami i AI.</p>
+
+                    </div>
+
+                </div>
             </section>
 
             <section className={"values"}>
                 <h4>Nasze <em>wartości</em></h4>
+
+                <div>
+                <div> Etyczne użycie AI</div>
+
+                </div>
             </section>
         </>
     );
