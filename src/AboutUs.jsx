@@ -7,8 +7,6 @@ import rocheLogo from "./assets/roche_logo.png";
 import human from "./assets/bg1.png";
 
 
-/* Licznik: animuje liczbę od 1 do `end` po załadowaniu strony.
-   prefix/suffix pozwalają zachować znaki typu "~" i "h+". */
 function CountUp({ end, prefix = "", suffix = "", duration = 1500 }) {
     const [value, setValue] = useState(1);
     useEffect(() => {
@@ -43,27 +41,30 @@ function AboutUs() {
     const [showContactInfo, setShowContactInfo] = useState(false);
 
     return (
-        <><link
-            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=download,lock,search"
-            rel="stylesheet"
-        />
+        <>
+            <link
+                href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=download,lock,search"
+                rel="stylesheet"
+            />
+            <link
+                href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+                rel="stylesheet"/>
             <header>
 
 
-
                 <div className="heroContent">
-                    <span className="heroEyebrow">Projekt HerStory</span>
+                    <div> <span className="heroEyebrow">Projekt HerStory</span></div>
+                    <div>
+                        <h1>SMap</h1>
 
-                    <h1>SMap</h1>
+                        <p className="intro">
+                            Pomoc pacjentom ze stwardnieniem rozsianym
+                            poprzez etyczne wykorzystanie sztucznej inteligencji.
+                        </p>
+                    </div>
 
-                    <p className="intro">
-                        Celem projektu jest pomoc pacjentom ze stwardnieniem rozsianym
-                        poprzez etyczne wykorzystanie sztucznej inteligencji.
-                    </p>
 
-                    <div className="heroDivider" />
-
-                    <h5 className="heroByline">Dominika Bomba &amp; Paulina Święcicka</h5>
+                    <div> <h5 className="heroByline">Dominika Bomba &amp; Paulina Święcicka</h5> </div>
                 </div>
             </header>
 
@@ -71,23 +72,23 @@ function AboutUs() {
             <section className="statsBar">
                 <div className={"headerNumbers"}>
                     <div>
-                        <CountUp end={4} />
-                        <div>miesiące<br/>  pracy</div>
+                        <CountUp end={4}/>
+                        <div>miesiące<br/> pracy</div>
                     </div>
 
                     <div>
-                        <CountUp end={13} />
+                        <CountUp end={13}/>
                         <div>zaangażowanych <br/> ekspertów</div>
                     </div>
 
                     <div>
                         <CountUp end={20} prefix="+"/>
-                        <div> godzin<br/>  konsultacji</div>
+                        <div> godzin<br/> konsultacji</div>
                     </div>
 
                     <div>
-                        <CountUp end={2985} prefix="~" />
-                        <div>przeanalizowanych<br/>  komentarzy</div>
+                        <CountUp end={2985} prefix="~"/>
+                        <div>przeanalizowanych<br/> komentarzy</div>
                     </div>
                 </div>
 
@@ -97,8 +98,8 @@ function AboutUs() {
                 </p>
 
                 <div className={"partners"}>
-                    <img src={gfrLogo} alt={"Roche logo"} />
-                    <img src={rocheLogo} alt={"Girls Future Ready logo"} />
+                    <img src={gfrLogo} alt={"Roche logo"}/>
+                    <img src={rocheLogo} alt={"Girls Future Ready logo"}/>
                 </div>
             </section>
 
@@ -109,7 +110,7 @@ function AboutUs() {
                     {Object.entries(events).map(([slug, event]) => (
                         <div id={slug} key={slug}>
                             <Link to={`/${slug}`}>
-                                <img src={event.image} alt={event.alt} />
+                                <img src={event.image} alt={event.alt}/>
                                 <span className="cardTag">{event.tag}</span>
                                 <h5>{event.title}</h5>
                                 <div>{event.short}</div>
@@ -185,15 +186,15 @@ function AboutUs() {
                 <h4> O mnie</h4>
                 <div>
                     <div>
-                        <div> <h4>Dominika Bomba </h4>  <img src={human} alt={"dominika photo"}/></div>
+                        <div><h4>Dominika Bomba </h4>  <img src={human} alt={"dominika photo"}/></div>
                         <p> Stworzyłam SMap, którego celem jest
-                        wsparcie pacjentów ze stwardnieniem rozsianym poprzez etyczne
-                        wykorzystanie sztucznej inteligencji. Na co dzień interesuję się
-                        programowaniem, nowymi technologiami i AI.</p>
+                            wsparcie pacjentów ze stwardnieniem rozsianym poprzez etyczne
+                            wykorzystanie sztucznej inteligencji. Na co dzień interesuję się
+                            programowaniem, nowymi technologiami i AI.</p>
 
                     </div>
                     <div>
-                        <div> <h4> Paulina Święcicka </h4>  <img src={human} alt={"dominika photo"}/></div>
+                        <div><h4> Paulina Święcicka </h4>  <img src={human} alt={"dominika photo"}/></div>
                         <p> Stworzyłam SMap, którego celem jest
                             wsparcie pacjentów ze stwardnieniem rozsianym poprzez etyczne
                             wykorzystanie sztucznej inteligencji. Na co dzień interesuję się
@@ -210,7 +211,8 @@ function AboutUs() {
                 <div>
                     <div>
                         <h5>Etyczne użycie AI</h5>
-                        <p>Szczegółowo werfikujemy i konsultujemy analizy sztucznej inteligencji w pełni dbając o prywatność.</p>
+                        <p>Szczegółowo werfikujemy i konsultujemy analizy sztucznej inteligencji w pełni dbając o
+                            prywatność.</p>
                     </div>
 
 

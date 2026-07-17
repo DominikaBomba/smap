@@ -2,13 +2,10 @@
     position: relative;
     overflow: hidden;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    text-align: center;
     min-height: 72vh;
-    padding: 96px 64px;
-    box-sizing: border-box;
+    padding: 0 10vw;
 }
 
 .heroContent::before {
@@ -18,12 +15,9 @@
     background-image: url("./assets/bg1.png");
     background-size: cover;
     background-position: center;
-    filter: blur(6px);
     z-index: 0;
 }
 
-/* gradient zamiast płaskiej nakładki — u dołu ciemniejszy,
-   dzięki czemu tekst ma kontrast, a tło zachowuje głębię */
 .heroContent::after {
     content: "";
     position: absolute;
@@ -40,11 +34,23 @@
 .heroContent > * {
     position: relative;
     z-index: 2;
+    text-align: center;
 }
 
-/* mały nadtytuł — nadaje "redakcyjny" charakter */
+.heroContent>div:nth-of-type(2n+1){
+    font-style: italic;
+    width: 20vw;
+    opacity: 0;
+    animation: heroFadeIn 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    animation-delay: 0.5s;
+    font-weight: 700;
+}
+
+.heroContent>div:nth-of-type(2n){
+    width: 40vw;
+}
+
 .heroEyebrow {
-    font-family: var(--font-mono);
     font-size: 0.75rem;
     letter-spacing: 0.25em;
     text-transform: uppercase;
@@ -52,25 +58,43 @@
     margin-bottom: 18px;
 }
 
+.heroContent > div:nth-of-type(2) {
+    width: 40vw;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .heroContent h1 {
-    margin: 0 0 20px;
-    font-size: clamp(3.2rem, 7vw, 5.5rem);
-    font-weight: 600;
-    line-height: 1.05;
+    opacity: 0.2;
+    margin: 0;
+    font-family: "Montserrat", sans-serif;
+    font-size: 20vh;
+    font-weight: 700;
+    line-height: 1;
     letter-spacing: -0.02em;
-    color: #faf7f0;
+    color: white;
     text-shadow: 0 2px 24px rgba(28, 44, 102, 0.45);
 }
 
 .heroContent p.intro {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     margin: 0;
+    width: 100%;
     max-width: 560px;
-    font-size: 1.05rem;
-    line-height: 1.75;
-    color: rgba(250, 247, 240, 0.92);
+    letter-spacing: 2px;
+    font-size: 0.75rem;
+    line-height: 1.6;
+    color: rgba(250, 247, 240, 0.95);
+    text-transform: uppercase;
+    text-align: center;
+    z-index: 3;
 }
 
-/* cienka linia oddzielająca podpis */
 .heroDivider {
     width: 56px;
     height: 1px;
@@ -80,12 +104,12 @@
 
 .heroByline {
     margin: 0;
-    font-style: italic;
     font-weight: 400;
     font-size: 0.9rem;
     letter-spacing: 0.06em;
     color: rgba(250, 247, 240, 0.85);
 }
+
 .btnOutline,
 .btnFilled {
     padding: 10px 24px;
@@ -118,8 +142,6 @@
     background-color: var(--accent-blue);
 }
 
-/* ===== Pasek statystyk i partnerów pod hero ===== */
-
 .statsBar {
     display: flex;
     flex-direction: column;
@@ -147,7 +169,6 @@
     max-width: 900px;
 }
 
-/* liczba + opisik "najechany" na jej prawy dolny róg */
 .headerNumbers > div {
     display: flex;
     flex-direction: row;
@@ -167,12 +188,10 @@
 }
 
 .headerNumbers > div > div {
-    position: relative;      /* opis leży NA liczbie, nie obok */
+    position: relative;
     z-index: 1;
-
-    margin-left: -10px;      /* tu reguluje się głębokość "najechania" */
+    margin-left: -10px;
     margin-top: 20px;
-
     padding-left: 1px;
     box-shadow: -15px 0px 10px -7px rgba(28, 44, 102, 0.5);
     top: -10px;
@@ -183,10 +202,8 @@
     border-radius: 2px;
     line-height: 1.25;
     text-align: left;
-
 }
 
-/* Loga partnerów obok siebie */
 .partners {
     display: flex;
     justify-content: center;
@@ -200,16 +217,12 @@
     object-fit: contain;
 }
 
-/* ===== SEKCJA RAPORT / ANALIZA / WYSZUKIWARKA =====
-   editorial: numeracja 01/02/03 + delikatne linie   */
-
 .reports {
     display: flex;
     flex-direction: column;
     width: 100%;
     max-width: 760px;
     margin: 0 auto;
-
     box-sizing: border-box;
     counter-reset: pozycja;
 }
@@ -220,6 +233,7 @@
     text-align: left;
     color: var(--accent-blue);
 }
+
 .reportRow {
     display: flex;
     flex-direction: row;
@@ -248,14 +262,16 @@
     white-space: nowrap;
     color: var(--text-dark);
 }
+
 .reportRow span{
     color: var(--accent-blue);
     opacity: 0.4;
 }
-.reportRow span:hover{
 
+.reportRow span:hover{
     opacity: 1;
 }
+
 .reportRow > div:first-of-type {
     flex: 0 0 10vw;
     display: flex;
@@ -289,7 +305,6 @@
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
     z-index: 10;
 }
-/* ===== SEKCJA "TAK DZIAŁAMY" — karuzela kart ===== */
 
 .whatWeDo {
     padding: 56px 24px 112px;
@@ -303,7 +318,6 @@
     color: var(--accent-blue);
 }
 
-/* poziomo przewijany rząd kart */
 .whatWeDo > div {
     display: flex;
     flex-wrap: nowrap;
@@ -331,7 +345,6 @@
     border-radius: 999px;
 }
 
-/* pojedyncza karta — stała szerokość, nie kurczy się */
 .whatWeDo > div > div {
     flex: 0 0 300px;
 }
@@ -346,7 +359,6 @@
     color: var(--text-dark);
 }
 
-/* mała etykieta nad tytułem */
 .cardTag {
     margin-top: 8px;
     font-family: var(--font-mono);
@@ -361,10 +373,9 @@
     aspect-ratio: 4 / 3;
     object-fit: cover;
     border-radius: 4px;
-    background-color: var(--accent-blue-soft); /* placeholder zanim wstawisz zdjęcia */
+    background-color: var(--accent-blue-soft);
 }
 
-/* tytuł karty — szeryfowy, jak w case studies z referencji */
 .whatWeDo h5 {
     margin: 0;
     font-size: 1.3rem;
@@ -373,7 +384,6 @@
     color: var(--accent-blue);
 }
 
-/* opis pod tytułem */
 .whatWeDo a > div {
     font-size: 0.88rem;
     color: var(--text-muted);
@@ -386,7 +396,6 @@
     text-underline-offset: 3px;
 }
 
-/* dopisek "Czytaj więcej" na karcie */
 .readMore {
     font-family: var(--font-mono);
     font-size: 0.75rem;
@@ -399,15 +408,12 @@
     text-decoration: underline;
 }
 
-/* ===== "O MNIE" i "NASZE WARTOŚCI" ===== */
-
 .aboutMe {
     max-width: 680px;
     width: 100%;
     margin: 0 auto;
     padding: 56px 24px;
     text-align: center;
-
 }
 
 .aboutMe>h4,
@@ -415,19 +421,22 @@
     margin: 0 0 24px;
     font-size: 2.1rem;
     color: var(--accent-blue);
-}.aboutMe>div{
-     display: flex;
-     flex-direction: row;
+}
 
-     flex-wrap: wrap;
- }
+.aboutMe>div{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
 .aboutMe>div>div{
     width: 50%;
 }
- .aboutMe img{
-     width: 40px;
-     border-radius: 50%;
- }
+
+.aboutMe img{
+    width: 40px;
+    border-radius: 50%;
+}
 
 .aboutMe p {
     margin: 0;
@@ -436,7 +445,6 @@
     color: var(--text-muted);
 }
 
-/* Kontener główny sekcji wartości */
 .values {
     padding: 60px 20px;
     text-align: center;
@@ -467,7 +475,6 @@
     max-width: 350px;
     background-color: rgba(255,255,255, 0.4);
     padding: 24px;
-
     box-shadow: 4px 4px 0px rgba(28, 44, 102, 0.9);
     border: 1px solid rgb(28, 44, 102);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
@@ -479,7 +486,6 @@
     box-shadow: 4px 4px 0px rgba(28, 44, 102, 1);
 }
 
-/* Tytuł wartości (h5) */
 .values h5 {
     font-size: 1.25rem;
     margin: 0 0 12px 0;
@@ -487,13 +493,13 @@
     font-weight: 600;
 }
 
-/* Opis wartości (p) */
 .values p {
     font-size: 0.95rem;
     color: #666;
     line-height: 1.5;
     margin: 0;
 }
+
 .iconButton {
     background: none;
     border: none;
@@ -508,7 +514,6 @@
     text-decoration: none;
 }
 
-/* rozmiar ikonek */
 .reportRow .material-symbols-outlined {
     font-size: 32px;
 }
@@ -517,43 +522,99 @@
     font-size: 0.85rem;
     margin-top: 0.5rem;
 }
-/* ===== Mobile ===== */
+
 @media (max-width: 640px) {
     header {
-        flex-direction: column;
         min-height: 0;
     }
 
-    .heroImage {
-        aspect-ratio: 4 / 3;
+    .heroContent {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 40px;
+        min-height: 90vh;
+        padding: 60px 24px;
     }
 
-    .heroContent {
-        padding: 40px 24px;
+    .heroContent > div:nth-of-type(2n+1),
+    .heroContent > div:nth-of-type(2) {
+        width: 100% !important;
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .heroEyebrow {
+        font-size: 0.7rem;
+        letter-spacing: 0.2em;
+        margin-bottom: 0;
+    }
+
+    .heroContent > div:nth-of-type(2) {
+        order: -1;
+        min-height: 180px;
     }
 
     .heroContent h1 {
-        font-size: 1.9rem;
+        font-size: clamp(4.5rem, 16vw, 7.5rem) !important;
+        line-height: 1;
+    }
+
+    .heroContent p.intro {
+        font-size: 0.68rem;
+        line-height: 1.5;
+        letter-spacing: 1px;
+        width: 90%;
+    }
+
+    .heroByline {
+        font-size: 0.8rem;
+        letter-spacing: 0.04em;
     }
 
     .headerNumbers {
         flex-direction: column;
         align-items: center;
-        gap: 28px;
+        gap: 32px;
+    }
+
+    .headerNumbers > div {
+        width: 100%;
     }
 
     .partners {
         flex-direction: column;
-        gap: 24px;
+        gap: 32px;
+    }
+
+    .aboutMe > div {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .aboutMe > div > div {
+        width: 100%;
     }
 
     .reportRow {
         flex-direction: column;
-        align-items: flex-start;
-        gap: 8px;
+        align-items: center;
+        text-align: center;
+        gap: 12px;
     }
 
-    .reportRow > div {
-        text-align: left;
+    .reportRow > div:last-of-type {
+        text-align: center;
+    }
+}
+
+@keyframes heroFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
 }
