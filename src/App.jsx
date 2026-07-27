@@ -38,10 +38,42 @@ function App() {
                     filtered.map(item => (
                         <div className="faqItem" key={item.id}>
                             <div className="faqItemHeader">
-                                <h3>{item.question}</h3>
                                 <span className="faqCategory">{item.category}</span>
+                                <h3>{item.question}</h3>
+
+
+                                <div className="faqMeta">
+                                    <div> Źródło: {item.linktitle}</div>
+                                    {item.link && (
+                                        <a
+                                            href={item.link}
+                                            className="faqLink"
+                                            title={item.linktitle || item.question}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                        >
+                                            {'Dowiedz się więcej'} &rarr;
+                                        </a>
+                                    )}
+                                </div>
                             </div>
-                            <p>{item.answer}</p>
+
+                            <div className="faqContent">
+                                <p className="faqAnswer">{item.answer}</p>
+
+                                {item.embedUrl && (
+                                    <div className="faqEmbedWrapper">
+                                        <iframe
+                                            src={item.embedUrl}
+                                            title={`Podgląd: ${item.question}`}
+                                            scrolling="no"
+                                            frameBorder="0"
+                                            allowFullScreen={true}
+                                            allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+                                        />
+                                    </div>
+                                )}
+                            </div>
                         </div>
                     ))
                 )}

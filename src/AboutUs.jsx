@@ -5,6 +5,11 @@ import "./Aboutus.css";
 import gfrLogo from "./assets/gfr.png";
 import rocheLogo from "./assets/roche_logo.png";
 import human from "./assets/bg1.png";
+import march from './assets/march.jpeg';
+import april from './assets/april.jpg';
+import may from './assets/may.jpeg';
+import june from './assets/june.jpeg';
+import july from './assets/july.jpeg';
 
 
 function CountUp({ end, prefix = "", suffix = "", duration = 1500 }) {
@@ -183,22 +188,16 @@ function AboutUs() {
             </section>
 
             <section className={"aboutMe"}>
-                <h4> O mnie</h4>
+                <h4> O nas</h4>
                 <div>
                     <div>
                         <div><h4>Dominika Bomba </h4>  <img src={human} alt={"dominika photo"}/></div>
-                        <p> Stworzyłam SMap, którego celem jest
-                            wsparcie pacjentów ze stwardnieniem rozsianym poprzez etyczne
-                            wykorzystanie sztucznej inteligencji. Na co dzień interesuję się
-                            programowaniem, nowymi technologiami i AI.</p>
+                        <p>Interesuje się technologią, szutczną inteligencją oraz programowaniem. </p>
 
                     </div>
                     <div>
                         <div><h4> Paulina Święcicka </h4>  <img src={human} alt={"dominika photo"}/></div>
-                        <p> Stworzyłam SMap, którego celem jest
-                            wsparcie pacjentów ze stwardnieniem rozsianym poprzez etyczne
-                            wykorzystanie sztucznej inteligencji. Na co dzień interesuję się
-                            programowaniem, nowymi technologiami i AI.</p>
+                        <p> [UZUPELNIC]</p>
 
                     </div>
 
@@ -230,6 +229,66 @@ function AboutUs() {
                         <h5>Współpraca</h5>
                         <p>Łączymy pokolenia (poprzez mentoring!), technologie i medycynę. </p>
                     </div>
+                </div>
+            </section>
+
+            <section className="journey">
+                <h4>Jak to się zaczeło?</h4>
+
+                <div className="timeline">
+                    <div className="timelineTrack"></div>
+
+                    <div className="timelineItem">
+                        <div className="timelineDot"></div>
+                        <div className="timelineCard">
+                            <span className="journeyMonth">Marzec</span>
+                            <img src={march} alt="Marzec" className="journeyImg" />
+                            <h5>Początek</h5>
+                            <p>Pierwsze spotkanie w biurze Roche tuż po rekrutacji i początek wspólnej przygody.</p>
+                        </div>
+                    </div>
+
+                    <div className="timelineItem">
+                        <div className="timelineDot"></div>
+                        <div className="timelineCard">
+                            <span className="journeyMonth">Kwiecień – Maj</span>
+                            <img src={april} alt="Kwiecień - Maj" className="journeyImg" />
+                            <h5>Wywiady</h5>
+                            <p>Przeprowadzenie ponad 13 wywiadów z ekspertami (neurologia, UX, AI), które wskazały potrzebę analizy social mediów.</p>
+                        </div>
+                    </div>
+
+                    <div className="timelineItem">
+                        <div className="timelineDot"></div>
+                        <div className="timelineCard">
+                            <span className="journeyMonth">Maj</span>
+                            <img src={may} alt="Maj" className="journeyImg" />
+                            <h5>Analiza</h5>
+                            <p>Przeprowadzenie dużej analizy zanonimizowanych rozmów społeczności: jakościowej, ilościowej i sentymentu.</p>
+                        </div>
+                    </div>
+
+                    <div className="timelineItem">
+                        <div className="timelineDot"></div>
+                        <div className="timelineCard">
+                            <span className="journeyMonth">Czerwiec</span>
+                            <img src={june} alt="Czerwiec" className="journeyImg" />
+                            <h5>Publikacja raportu</h5>
+                            <p>Połączenie głosu pacjentów, wiedzy eksperckiej i danych w jeden zasób.</p>
+                        </div>
+                    </div>
+
+                    <div className="timelineItem">
+                        <div className="timelineDot"></div>
+                        <div className="timelineCard">
+                            <span className="journeyMonth">Od czerwca</span>
+                            <img src={july} alt="Od czerwca" className="journeyImg" />
+                            <h5>Promocja</h5>
+                            <p>Dzielenie się wypracowanymi zasobami i historią naszego mentoringu.</p>
+                        </div>
+                    </div>
+
+
                 </div>
             </section>
         </>

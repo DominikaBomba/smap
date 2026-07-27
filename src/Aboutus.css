@@ -195,7 +195,8 @@
     padding-left: 1px;
     box-shadow: -15px 0px 10px -7px rgba(28, 44, 102, 0.5);
     top: -10px;
-    background-color: var(--bg-cream);
+    background-color: rgba(247, 243, 234, 0.7);
+
     color: var(--accent-blue);
     font-size: 0.68rem;
     font-weight: 600;
@@ -209,6 +210,7 @@
     justify-content: center;
     align-items: center;
     gap: 56px;
+    width: 100%;
 }
 
 .partners img {
@@ -238,7 +240,7 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 5vw;
+    gap: 1vw;
     padding: 26px 4px;
     border-bottom: 1px solid rgba(39, 65, 158, 0.25);
 }
@@ -252,7 +254,7 @@
 }
 
 .reportRow h5 {
-    flex: 0 0 20vw;
+    flex: 0 0 10vw;
     margin: 0;
     font-family: var(--font-mono);
     font-size: 0.9rem;
@@ -523,6 +525,126 @@
     margin-top: 0.5rem;
 }
 
+.journey {
+    padding: 40px 24px 80px;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.journey h4 {
+    margin: 0 0 28px;
+    font-size: 2.1rem;
+    color: var(--accent-blue);
+}
+
+.timeline {
+    position: relative;
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 24px;
+    padding: 20px 4px 16px;
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+    scrollbar-color: var(--accent-blue) var(--accent-blue-soft);
+    scrollbar-width: thin;
+}
+
+.timeline::-webkit-scrollbar {
+    height: 6px;
+}
+
+.timeline::-webkit-scrollbar-track {
+    background: var(--accent-blue-soft);
+    border-radius: 999px;
+}
+
+.timeline::-webkit-scrollbar-thumb {
+    background: var(--accent-blue);
+    border-radius: 999px;
+}
+
+.timelineTrack {
+    position: absolute;
+    top: 27px;
+    left: 10px;
+    right: 10px;
+    height: 2px;
+    background-color: var(--accent-blue);
+    opacity: 0.3;
+    z-index: 0;
+}
+
+.timelineItem {
+    position: relative;
+    z-index: 1;
+    flex: 0 0 240px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.timelineDot {
+    width: 12px;
+    height: 12px;
+    background-color: var(--accent-blue);
+    border-radius: 50%;
+    margin-bottom: 16px;
+    box-shadow: 0 0 0 4px var(--bg-cream, #fff);
+}
+
+.timelineCard {
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.5);
+    border: 1px solid var(--navy-deep);
+    box-shadow: 3px 3px 0px rgba(28, 44, 102, 0.85);
+    padding: 14px;
+    border-radius: 4px;
+    box-sizing: border-box;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.timelineCard:hover {
+    transform: translateY(-3px);
+    box-shadow: 4px 4px 0px rgba(28, 44, 102, 1);
+}
+
+.journeyMonth {
+    display: block;
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--accent-blue);
+    margin-bottom: 8px;
+}
+
+.journeyImg {
+    width: 100%;
+    height: 110px;
+    object-fit: cover;
+    border-radius: 3px;
+    background-color: var(--accent-blue-soft);
+    margin-bottom: 10px;
+}
+
+.timelineCard h5 {
+    margin: 0 0 6px 0;
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.2;
+    color: var(--text-dark);
+}
+
+.timelineCard p {
+    margin: 0;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    line-height: 1.4;
+}
+
 @media (max-width: 640px) {
     header {
         min-height: 0;
@@ -573,18 +695,24 @@
     }
 
     .headerNumbers {
-        flex-direction: column;
-        align-items: center;
-        gap: 32px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 24px 16px;
     }
 
     .headerNumbers > div {
         width: 100%;
+        min-width: 0;
     }
 
     .partners {
-        flex-direction: column;
-        gap: 32px;
+        flex-direction: row;
+        justify-content: center;
+        gap: 24px;
+    }
+
+    .partners img {
+        height: 38px;
     }
 
     .aboutMe > div {
