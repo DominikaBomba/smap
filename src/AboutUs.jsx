@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { events } from "./event";
+import { useTranslation } from "react-i18next";
+import { getEvents } from "./event";
 import "./Aboutus.css";
 import gfrLogo from "./assets/gfr.png";
 import rocheLogo from "./assets/roche_logo.png";
@@ -10,6 +11,9 @@ import april from './assets/april.jpg';
 import may from './assets/may.jpeg';
 import june from './assets/june.jpeg';
 import july from './assets/july.jpeg';
+import dominika from './assets/dominika.jpg';
+import paulina from './assets/paulina.png';
+
 
 
 function CountUp({ end, prefix = "", suffix = "", duration = 1500 }) {
@@ -43,7 +47,9 @@ function CountUp({ end, prefix = "", suffix = "", duration = 1500 }) {
 }
 
 function AboutUs() {
+    const { t } = useTranslation();
     const [showContactInfo, setShowContactInfo] = useState(false);
+    const events = getEvents(t("events", { returnObjects: true }));
 
     return (
         <>
@@ -58,18 +64,17 @@ function AboutUs() {
 
 
                 <div className="heroContent">
-                    <div> <span className="heroEyebrow">Projekt HerStory</span></div>
+                    <div> <span className="heroEyebrow">{t("aboutUs.eyebrow")}</span></div>
                     <div>
-                        <h1>SMap</h1>
+                        <h1>{t("aboutUs.heading")}</h1>
 
                         <p className="intro">
-                            Pomoc pacjentom ze stwardnieniem rozsianym
-                            poprzez etyczne wykorzystanie sztucznej inteligencji.
+                            {t("aboutUs.intro")}
                         </p>
                     </div>
 
 
-                    <div> <h5 className="heroByline">Dominika Bomba &amp; Paulina Święcicka</h5> </div>
+                    <div> <h5 className="heroByline">{t("aboutUs.byline")}</h5> </div>
                 </div>
             </header>
 
@@ -78,39 +83,38 @@ function AboutUs() {
                 <div className={"headerNumbers"}>
                     <div>
                         <CountUp end={4}/>
-                        <div>miesiące<br/> pracy</div>
+                        <div>{t("aboutUs.stats.months")}<br/> {t("aboutUs.stats.monthsLine2")}</div>
                     </div>
 
                     <div>
                         <CountUp end={13}/>
-                        <div>zaangażowanych <br/> ekspertów</div>
+                        <div>{t("aboutUs.stats.experts")} <br/> {t("aboutUs.stats.expertsLine2")}</div>
                     </div>
 
                     <div>
                         <CountUp end={20} prefix="+"/>
-                        <div> godzin<br/> konsultacji</div>
+                        <div> {t("aboutUs.stats.hours")}<br/> {t("aboutUs.stats.hoursLine2")}</div>
                     </div>
 
                     <div>
                         <CountUp end={2985} prefix="~"/>
-                        <div>przeanalizowanych<br/> komentarzy</div>
+                        <div>{t("aboutUs.stats.comments")}<br/> {t("aboutUs.stats.commentsLine2")}</div>
                     </div>
                 </div>
 
                 <p>
-                    Projekt realizowany w ramach HerStory we współpracy fundacji
-                    Girls Future Ready oraz Roche Polska.
+                    {t("aboutUs.partnersText")}
                 </p>
 
                 <div className={"partners"}>
-                    <img src={gfrLogo} alt={"Roche logo"}/>
-                    <img src={rocheLogo} alt={"Girls Future Ready logo"}/>
+                    <img src={gfrLogo} alt={t("aboutUs.partnerAlt1")}/>
+                    <img src={rocheLogo} alt={t("aboutUs.partnerAlt2")}/>
                 </div>
             </section>
 
 
             <section className="whatWeDo">
-                <h4>Tak <em>działamy</em>:</h4>
+                <h4>{t("aboutUs.whatWeDo.headingPrefix")} <em>{t("aboutUs.whatWeDo.headingEm")}</em>:</h4>
                 <div>
                     {Object.entries(events).map(([slug, event]) => (
                         <div id={slug} key={slug}>
@@ -119,47 +123,44 @@ function AboutUs() {
                                 <span className="cardTag">{event.tag}</span>
                                 <h5>{event.title}</h5>
                                 <div>{event.short}</div>
-                                <span className="readMore">Czytaj więcej →</span>
+                                <span className="readMore">{t("aboutUs.whatWeDo.readMore")}</span>
                             </Link>
                         </div>
                     ))}
                 </div>
             </section>
             <section className="reports">
-                <h4>Co <em>tworzymy</em>?</h4>
+                <h4>{t("aboutUs.reports.headingPrefix")} <em>{t("aboutUs.reports.headingEm")}</em>?</h4>
 
                 <div className="reportRow">
-                    <h5>RAPORT</h5>
+                    <h5>{t("aboutUs.reports.report.label")}</h5>
                     <div>
-                        <a href="./assets/" download="raport_Smap_june2026.pdf" aria-label="Pobierz raport">
+                        <a href="./assets/" download="raport_Smap_june2026.pdf" aria-label={t("aboutUs.reports.report.downloadAriaLabel")}>
                             <span className="material-symbols-outlined">download</span>
                         </a>
                     </div>
                     <div>
                         <strong>
-                            Potential Areas Where Patients Diagnosed with MS Can Be
-                            Supported by AI
+                            {t("aboutUs.reports.report.titleBold")}
                         </strong>{" "}
-                        — raport oparty na ponad 13 wywiadach z ekspertami Roche
-                        z neurologii, sztucznej inteligencji i komunikacji.
+                        {t("aboutUs.reports.report.description")}
                     </div>
                 </div>
 
                 <div className="reportRow">
-                    <h5>ANALIZA</h5>
+                    <h5>{t("aboutUs.reports.analysis.label")}</h5>
                     <div>
                         <button
                             type="button"
                             className="iconButton"
                             onClick={() => setShowContactInfo((prev) => !prev)}
-                            aria-label="Informacja o dostępie do analizy"
+                            aria-label={t("aboutUs.reports.analysis.ariaLabel")}
                         >
                             <span className="material-symbols-outlined">lock</span>
                         </button>
                         {showContactInfo && (
                             <p className="contactInfo">
-                                Dostęp do analizy jest ograniczony — prosimy o kontakt
-                                mailowy:{" "}
+                                {t("aboutUs.reports.analysis.contactInfo")}{" "}
                                 <a href="mailto:kontakt@twojadomena.pl">
                                     ...
                                 </a>
@@ -167,37 +168,34 @@ function AboutUs() {
                         )}
                     </div>
                     <div>
-                        Analiza około 3000 zanonimizowanych komentarzy społeczności
-                        SM: o czym pacjenci rozmawiają, czego szukają i co ich
-                        niepokoi. Dostępna dla wybranych organizacji.
+                        {t("aboutUs.reports.analysis.description")}
                     </div>
                 </div>
 
                 <div className="reportRow">
-                    <h5>WYSZUKIWARKA</h5>
+                    <h5>{t("aboutUs.reports.search.label")}</h5>
                     <div>
-                        <Link to="/.." aria-label="Przejdź do wyszukiwarki">
+                        <Link to="/.." aria-label={t("aboutUs.reports.search.ariaLabel")}>
                             <span className="material-symbols-outlined">search</span>
                         </Link>
                     </div>
                     <div>
-                        Zbiór prawdziwych pytań społeczności SM wraz z odpowiedziami,
-                        w formie prostej wyszukiwarki. Dostępna dla pacjentów.
+                        {t("aboutUs.reports.search.description")}
                     </div>
                 </div>
             </section>
 
             <section className={"aboutMe"}>
-                <h4> O nas</h4>
+                <h4>{t("aboutUs.aboutMe.heading")}</h4>
                 <div>
                     <div>
-                        <div><h4>Dominika Bomba </h4>  <img src={human} alt={"dominika photo"}/></div>
-                        <p>Interesuje się technologią, szutczną inteligencją oraz programowaniem. </p>
+                        <div><h4>{t("aboutUs.aboutMe.person1Name")}</h4>  <img src={dominika} alt={t("aboutUs.aboutMe.photoAlt")}/></div>
+                        <p>{t("aboutUs.aboutMe.person1Bio")}</p>
 
                     </div>
                     <div>
-                        <div><h4> Paulina Święcicka </h4>  <img src={human} alt={"dominika photo"}/></div>
-                        <p> [UZUPELNIC]</p>
+                        <div><h4>{t("aboutUs.aboutMe.person2Name")}</h4>  <img src={paulina} alt={t("aboutUs.aboutMe.photoAlt")}/></div>
+                        <p>{t("aboutUs.aboutMe.person2Bio")}</p>
 
                     </div>
 
@@ -205,35 +203,34 @@ function AboutUs() {
             </section>
 
             <section className={"values"}>
-                <h4>Nasze <em>wartości</em></h4>
+                <h4>{t("aboutUs.values.headingPrefix")} <em>{t("aboutUs.values.headingEm")}</em></h4>
 
                 <div>
                     <div>
-                        <h5>Etyczne użycie AI</h5>
-                        <p>Szczegółowo werfikujemy i konsultujemy analizy sztucznej inteligencji w pełni dbając o
-                            prywatność.</p>
+                        <h5>{t("aboutUs.values.ethics.title")}</h5>
+                        <p>{t("aboutUs.values.ethics.text")}</p>
                     </div>
 
 
                     <div>
-                        <h5>Dostępność dla każdego</h5>
-                        <p>Tworzymy narzędzia łatwych do użycia i zrozumienia przez każdego</p>
+                        <h5>{t("aboutUs.values.accessibility.title")}</h5>
+                        <p>{t("aboutUs.values.accessibility.text")}</p>
                     </div>
 
                     <div>
-                        <h5>Rzetelność</h5>
-                        <p>Opieramy się jedynie na twardych danych oraz wiedzy ekspertów medycznych</p>
+                        <h5>{t("aboutUs.values.reliability.title")}</h5>
+                        <p>{t("aboutUs.values.reliability.text")}</p>
                     </div>
 
                     <div>
-                        <h5>Współpraca</h5>
-                        <p>Łączymy pokolenia (poprzez mentoring!), technologie i medycynę. </p>
+                        <h5>{t("aboutUs.values.cooperation.title")}</h5>
+                        <p>{t("aboutUs.values.cooperation.text")}</p>
                     </div>
                 </div>
             </section>
 
             <section className="journey">
-                <h4>Jak to się zaczeło?</h4>
+                <h4>{t("aboutUs.journey.heading")}</h4>
 
                 <div className="timeline">
                     <div className="timelineTrack"></div>
@@ -241,50 +238,50 @@ function AboutUs() {
                     <div className="timelineItem">
                         <div className="timelineDot"></div>
                         <div className="timelineCard">
-                            <span className="journeyMonth">Marzec</span>
-                            <img src={march} alt="Marzec" className="journeyImg" />
-                            <h5>Początek</h5>
-                            <p>Pierwsze spotkanie w biurze Roche tuż po rekrutacji i początek wspólnej przygody.</p>
+                            <span className="journeyMonth">{t("aboutUs.journey.march.month")}</span>
+                            <img src={march} alt={t("aboutUs.journey.march.alt")} className="journeyImg" />
+                            <h5>{t("aboutUs.journey.march.title")}</h5>
+                            <p>{t("aboutUs.journey.march.text")}</p>
                         </div>
                     </div>
 
                     <div className="timelineItem">
                         <div className="timelineDot"></div>
                         <div className="timelineCard">
-                            <span className="journeyMonth">Kwiecień – Maj</span>
-                            <img src={april} alt="Kwiecień - Maj" className="journeyImg" />
-                            <h5>Wywiady</h5>
-                            <p>Przeprowadzenie ponad 13 wywiadów z ekspertami (neurologia, UX, AI), które wskazały potrzebę analizy social mediów.</p>
+                            <span className="journeyMonth">{t("aboutUs.journey.aprilMay.month")}</span>
+                            <img src={april} alt={t("aboutUs.journey.aprilMay.alt")} className="journeyImg" />
+                            <h5>{t("aboutUs.journey.aprilMay.title")}</h5>
+                            <p>{t("aboutUs.journey.aprilMay.text")}</p>
                         </div>
                     </div>
 
                     <div className="timelineItem">
                         <div className="timelineDot"></div>
                         <div className="timelineCard">
-                            <span className="journeyMonth">Maj</span>
-                            <img src={may} alt="Maj" className="journeyImg" />
-                            <h5>Analiza</h5>
-                            <p>Przeprowadzenie dużej analizy zanonimizowanych rozmów społeczności: jakościowej, ilościowej i sentymentu.</p>
+                            <span className="journeyMonth">{t("aboutUs.journey.may.month")}</span>
+                            <img src={may} alt={t("aboutUs.journey.may.alt")} className="journeyImg" />
+                            <h5>{t("aboutUs.journey.may.title")}</h5>
+                            <p>{t("aboutUs.journey.may.text")}</p>
                         </div>
                     </div>
 
                     <div className="timelineItem">
                         <div className="timelineDot"></div>
                         <div className="timelineCard">
-                            <span className="journeyMonth">Czerwiec</span>
-                            <img src={june} alt="Czerwiec" className="journeyImg" />
-                            <h5>Publikacja raportu</h5>
-                            <p>Połączenie głosu pacjentów, wiedzy eksperckiej i danych w jeden zasób.</p>
+                            <span className="journeyMonth">{t("aboutUs.journey.june.month")}</span>
+                            <img src={june} alt={t("aboutUs.journey.june.alt")} className="journeyImg" />
+                            <h5>{t("aboutUs.journey.june.title")}</h5>
+                            <p>{t("aboutUs.journey.june.text")}</p>
                         </div>
                     </div>
 
                     <div className="timelineItem">
                         <div className="timelineDot"></div>
                         <div className="timelineCard">
-                            <span className="journeyMonth">Od czerwca</span>
-                            <img src={july} alt="Od czerwca" className="journeyImg" />
-                            <h5>Promocja</h5>
-                            <p>Dzielenie się wypracowanymi zasobami i historią naszego mentoringu.</p>
+                            <span className="journeyMonth">{t("aboutUs.journey.july.month")}</span>
+                            <img src={july} alt={t("aboutUs.journey.july.alt")} className="journeyImg" />
+                            <h5>{t("aboutUs.journey.july.title")}</h5>
+                            <p>{t("aboutUs.journey.july.text")}</p>
                         </div>
                     </div>
 

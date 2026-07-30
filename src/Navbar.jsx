@@ -1,24 +1,44 @@
 import { Link, NavLink } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import "./Navbar.css";
 
 /* Górna nawigacja w stylu referencji:
    logo z szeryfową kursywą | linki w monospace | owalny przycisk CTA */
 function Navbar() {
+    const { t, i18n } = useTranslation();
+
+    const toggleLanguage = () => {
+        const next = i18n.language === "pl" ? "en" : "pl";
+        i18n.changeLanguage(next);
+    };
+
     return (
         <nav className="siteNav">
             <Link to="/aboutUs" className="siteNavLogo">
-                <em>SM</em>ap
+                <em>{t("navbar.logoPrefix")}</em>{t("navbar.logoSuffix")}
             </Link>
 
             <div className="siteNavLinks">
-                <NavLink to="/">Wyszukiwarka</NavLink>
-                <NavLink to="/aboutUs">O nas</NavLink>
+                <NavLink to="/">{t("navbar.search")}</NavLink>
+                <NavLink to="/aboutUs">{t("navbar.aboutUs")}</NavLink>
             </div>
 
-            {/* podmień href, gdy raport będzie miał swój adres */}
-            <a className="siteNavCta" href="#">
-                Zobacz raport
-            </a>
+            <div className="siteNavRight">
+                <button
+                    type="button"
+                    className="langSwitch"
+                    onClick={toggleLanguage}
+                    aria-label="Zmień język / Change language"
+                    title="Zmień język / Change language"
+                >
+                    {i18n.language === "pl" ? "EN" : "PL"}
+                </button>
+
+                {/* podmień href, gdy raport będzie miał swój adres */}
+                <a className="siteNavCta" href="#">
+                    {t("navbar.seeReport")}
+                </a>
+            </div>
         </nav>
     );
 }

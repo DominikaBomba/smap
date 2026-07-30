@@ -1,9 +1,14 @@
 import { useState } from 'react'
+import { useTranslation } from 'react-i18next'
 import './App.css'
-import questions from './questions.json'
+import questionsPl from './questions.pl.json'
+import questionsEn from './questions.en.json'
 
 function App() {
+    const { t, i18n } = useTranslation()
     const [query, setQuery] = useState('')
+
+    const questions = i18n.language === 'en' ? questionsEn : questionsPl
 
     const search = query.toLowerCase().trim()
 
@@ -15,24 +20,24 @@ function App() {
 
     return (
         <main className="faq">
-            <h1>Wyszukiwarka <em>pytań</em></h1>
+            <h1>{t('app.titlePrefix')} <em>{t('app.titleEm')}</em></h1>
 
             <input
                 type="text"
                 className="faqSearch"
-                placeholder="Wpisz, czego szukasz…"
+                placeholder={t('app.searchPlaceholder')}
                 value={query}
                 onChange={e => setQuery(e.target.value)}
             />
 
             <p className="faqCount">
-                {filtered.length} z {questions.length} pytań
+                {t('app.countText', { filtered: filtered.length, total: questions.length })}
             </p>
 
             <div className="faqResults">
                 {filtered.length === 0 ? (
                     <p className="faqEmpty">
-                        Brak pytań pasujących do „{query}”. Spróbuj innego słowa.
+                        {t('app.emptyResults', { query })}
                     </p>
                 ) : (
                     filtered.map(item => (
@@ -43,7 +48,7 @@ function App() {
 
 
                                 <div className="faqMeta">
-                                    <div> Źródło: {item.linktitle}</div>
+                                    <div>{t('app.source', { linktitle: item.linktitle })}</div>
                                     {item.link && (
                                         <a
                                             href={item.link}
@@ -52,7 +57,7 @@ function App() {
                                             target="_blank"
                                             rel="noopener noreferrer"
                                         >
-                                            {'Dowiedz się więcej'} &rarr;
+                                            {t('app.learnMore')} &rarr;
                                         </a>
                                     )}
                                 </div>
@@ -65,7 +70,7 @@ function App() {
                                     <div className="faqEmbedWrapper">
                                         <iframe
                                             src={item.embedUrl}
-                                            title={`Podgląd: ${item.question}`}
+                                            title={t('app.previewTitle', { question: item.question })}
                                             scrolling="no"
                                             frameBorder="0"
                                             allowFullScreen={true}

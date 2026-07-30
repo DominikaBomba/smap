@@ -1,0 +1,165 @@
+[
+  {
+    "id": 1,
+    "question": "Czym jest stwardnienie rozsiane i kogo najczęściej dotyka?",
+    "answer": "Stwardnienie rozsiane (SM) jest chorobą ośrodkowego układu nerwowego, zajmującą mózgowie oraz rdzeń kręgowy. Najczęściej pojawia się u osób młodych – pomiędzy 20. a 40. rokiem życia. Kobiety chorują na SM od 2 do 3 razy częściej niż mężczyźni.",
+    "category": "diagnoza i objawy",
+    "link": "https://www.youtube.com/watch?v=PPGCci6O0Sg",
+    "linktitle": "Wiedza Pacjenta"
+  },
+  {
+    "id": 2,
+    "question": "Czy z SM można normalnie pracować?",
+    "answer": "Tak, większość osób z SM kontynuuje pracę zawodową, zwłaszcza przy wcześnie rozpoczętym leczeniu. Czasem pomocne są drobne dostosowania, np. elastyczne godziny pracy lub praca zdalna w okresach gorszego samopoczucia.",
+    "category" : "general"
+  },
+  {
+    "id": 3,
+    "question": "Jak przygotować się do wizyty u neurologa?",
+    "answer": "Warto spisać wcześniej swoje objawy (kiedy się pojawiły, jak długo trwały), listę przyjmowanych leków oraz pytania, które chcesz zadać. Dobrze też zabrać dokumentację z poprzednich badań, np. wyniki rezonansu.",
+    "category" : "general"
+  },
+
+    {
+      "id": 4,
+      "question": "Czy odstawienie glutenu pomaga przy stwardnieniu rozsianym (SM)?",
+      "answer": "Obecnie nie ma wiarygodnych dowodów naukowych na to, że rutynowe wykluczenie glutenu poprawia przebieg stwardnienia rozsianego.",
+      "category": "dieta",
+      "link": "https://www.facebook.com/share/r/1BdtsrsYdw/"
+    },
+    {
+      "id": 5,
+      "question": "Kiedy osoba z SM powinna stosować dietę bezglutenową?",
+      "answer": "Dieta bezglutenowa jest konieczna jedynie u osób z celiakią lub potwierdzoną nadwrażliwością na gluten.",
+      "category": "dieta",
+      "link": "https://www.facebook.com/share/r/1BdtsrsYdw/",
+      "linktitle": "Fundacja StwardnienieRozsiane.info"
+    },
+    {
+      "id": 6,
+      "question": "Czym grozi niepotrzebne wyeliminowanie glutenu z diety?",
+      "answer": "Niepotrzebna eliminacja glutenu może prowadzić do niedoborów błonnika, witamin z grupy B oraz niektórych składników mineralnych.",
+      "category": "dieta",
+      "link": "https://www.facebook.com/share/r/1BdtsrsYdw/",
+      "linktitle": "Fundacja StwardnienieRozsiane.info"
+    },
+    {
+      "id": 7,
+      "question": "Jaka dieta jest najbardziej zalecana dla osób chorujących na SM?",
+      "answer": "U osób z SM największe znaczenie ma dobrze zbilansowana dieta oparta na aktualnych zaleceniach, a nie eliminowanie glutenu bez jednoznacznych wskazań medycznych.",
+      "category": "dieta",
+      "link": "https://www.facebook.com/share/r/1BdtsrsYdw/",
+      "linktitle": "Fundacja StwardnienieRozsiane.info"
+    },
+
+    {
+      "id": 8,
+      "question": "Czy kobiety chorujące na stwardnienie rozsiane mogą i powinny karmić piersią?",
+      "answer": "Tak, karmienie piersią u pacjentek ze stwardnieniem rozsianym jest jak najbardziej zalecane i kobiety powinny w tym okresie karmić piersią.",
+      "category": "macierzyństwo",
+      "link": "https://www.youtube.com/watch?v=E6ZCglkO-BM",
+      "linktitle": "Neurozmobilizowani.pl"
+    },
+    {
+      "id": 9,
+      "question": "Czy podczas karmienia piersią pacjentki z SM mogą przyjmować leki?",
+      "answer": "Tak, istnieje mnóstwo leków, które można stosować u mam chorych na stwardnienie rozsiane karmiących piersią.",
+      "category": "macierzyństwo",
+      "link": "https://www.youtube.com/watch?v=E6ZCglkO-BM",
+      "linktitle": "Neurozmobilizowani.pl"
+    },
+    {
+      "id": 10,
+      "question": "Jakie korzyści zdrowotne daje karmienie piersią kobiecie z SM?",
+      "answer": "Karmienie piersią zmniejsza efekt osteoporozy w późniejszym okresie, obniża ryzyko depresji poporodowej oraz nowotworu sutka, a co kluczowe — zmniejsza ryzyko rzutu choroby w okresie poporodowym o 1/3.",
+      "category": "macierzyństwo",
+      "link": "https://www.youtube.com/watch?v=E6ZCglkO-BM",
+      "linktitle": "Neurozmobilizowani.pl"
+    },
+    {
+      "id": 11,
+      "question": "Jakie są zalecenia WHO dotyczące wyłącznego karmienia piersią?",
+      "answer": "Światowa Organizacja Zdrowia (WHO) zaleca wszystkim mamom planującym macierzyństwo, aby przez pierwsze pół roku starały się karmić dzieci wyłącznie piersią.",
+      "category": "macierzyństwo",
+      "link": "https://www.youtube.com/watch?v=E6ZCglkO-BM",
+      "linktitle": "Neurozmobilizowani.pl"
+    },
+
+    {
+      "id": 12,
+      "question": "Czy kobieta ze stwardnieniem rozsianym (SM) musi rodzić w specjalistycznym szpitalu?",
+      "answer": "Nie, stwardnienie rozsiane i ciąża nie są przeciwwskazaniem do tego, aby pacjentka była prowadzona i rodziła w zwykłym szpitalu z oddziałem ginekologiczno-położniczym.",
+      "category": "macierzyństwo",
+      "link": "https://www.youtube.com/watch?v=C96KR6Qg67w",
+      "linktitle": "Neurozmobilizowani.pl"
+    },
+    {
+      "id": 13,
+      "question": "Czy stwardnienie rozsiane jest przeciwwskazaniem do porodu naturalnego?",
+      "answer": "Samo stwardnienie rozsiane nie stanowi przeciwwskazania do porodu naturalnego. Jedynymi przeciwwskazaniami są bezpośrednie trudności położnicze podczas samego porodu oraz stopień niepełnosprawności pacjentki.",
+      "category": "macierzyństwo",
+      "link": "https://www.youtube.com/watch?v=C96KR6Qg67w",
+      "linktitle": "Neurozmobilizowani.pl"
+    },
+    {
+      "id": 14,
+      "question": "Czy kobiety z SM mogą korzystać ze znieczulenia podczas porodu?",
+      "answer": "Tak, pacjentki rodzące w sposób fizjologiczny mogą korzystać ze znieczulenia łagodzącego ból porodowy tak jak każda inna kobieta. Przy cięciu cesarskim nie ma konieczności stosowania znieczulenia ogólnego – można zastosować znieczulenie zewnątrzoponowe lub podpajęczynówkowe.",
+      "category": "macierzyństwo",
+      "link": "https://www.youtube.com/watch?v=C96KR6Qg67w",
+      "linktitle": "Neurozmobilizowani.pl"
+    },
+  {
+    "id": 15,
+    "question": "Jaka jest przyczyna powstawania stwardnienia rozsianego?",
+    "answer": "Etiologia stwardnienia rozsianego nie jest do końca poznana, jednak dużą rolę przypisuje się czynnikom autoimmunologicznym – uznaje się, że jest to najpewniej choroba z autoagresji.",
+    "category": "diagnoza i objawy",
+    "link": "https://www.youtube.com/watch?v=PPGCci6O0Sg",
+    "linktitle": "Wiedza pacjenta"
+  } ,
+  {
+    "id": 16,
+    "question": "Jakie są najczęstsze objawy pierwotnie postępującej postaci stwardnienia rozsianego (PPMS)?",
+    "answer": "Najczęstszym pierwszym objawem jest stopniowo narastający niedowład (parapareza) kończyn dolnych, objawiający się trudnościami w chodzeniu. Często towarzyszy mu ból w dolnym odcinku kręgosłupa z powodu przeciążeń. Drugim najczęstszym objawem są zaburzenia równowagi i koordynacji ruchów (zaburzenia móżdżkowe), a także problemy ze zwieraczami (głównie z oddawaniem moczu) oraz zaburzenia potencji u mężczyzn.",
+    "category": "diagnoza i objawy",
+    "link": "https://www.youtube.com/watch?v=BvpyIYvWv0E",
+    "linktitle": "Wiedza pacjenta"
+  },
+
+
+    {
+      "id": 20,
+      "question": "Z czego wynika nadwrażliwość temperaturowa u osób ze stwardnieniem rozsianym?",
+      "answer": "Wynika ona z uszkodzenia osłonek mielinowych nerwów. Gdy temperatura ciała wzrasta lub spada, przewodzenie impulsów w układzie nerwowym działa mniej efektywnie, co czasowo nasila objawy neurologiczne. Nie oznacza to jednak rzutu choroby ani trwałego pogorszenia.",
+      "category": "objawy",
+      "link": "https://www.facebook.com/permalink.php?story_fbid=pfbid02Q8oHeD3FacNBVeKJbCtrZPiBexdwkDht39b6oQdRFwCWPhdMFgpwFSz1zeboTYDql&id=100068950606334",
+      "linktitle": "neurozmobilizowani.pl",
+      "embedUrl": "https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fpermalink.php%3Fstory_fbid%3Dpfbid02Q8oHeD3FacNBVeKJbCtrZPiBexdwkDht39b6oQdRFwCWPhdMFgpwFSz1zeboTYDql%26id%3D100068950606334&show_text=true&width=500"
+    },
+
+    {
+      "id": 21,
+      "question": "Jak wysokie temperatury wpływają na organizm osoby z SM?",
+      "answer": "Upał, duszne pomieszczenia, gorące kąpiele czy intensywny wysiłek mogą nasilać zmęczenie, problemy z równowagą i koordynacją, osłabienie mięśni, zaburzenia widzenia, trudności z koncentracją oraz ból.",
+      "category": "objawy",
+      "link": "https://www.facebook.com/permalink.php?story_fbid=pfbid02Q8oHeD3FacNBVeKJbCtrZPiBexdwkDht39b6oQdRFwCWPhdMFgpwFSz1zeboTYDql&id=100068950606334",
+      "linktitle": "neurozmobilizowani.pl"
+    },
+    {
+      "id": 22,
+      "question": "Jak zimno i niskie temperatury wpływają na osoby chorych na SM?",
+      "answer": "Niskie temperatury mogą nasilać spastyczność i sztywność mięśni, bóle nerwowe, trudności z poruszaniem się, uczucie zmęczenia oraz obniżenie nastroju.",
+      "category": "objawy",
+      "link": "https://www.facebook.com/permalink.php?story_fbid=pfbid02Q8oHeD3FacNBVeKJbCtrZPiBexdwkDht39b6oQdRFwCWPhdMFgpwFSz1zeboTYDql&id=100068950606334",
+      "linktitle": "neurozmobilizowani.pl"
+    },
+    {
+      "id": 23,
+      "question": "Czy nasilenie objawów pod wpływem temperatury oznacza rzut choroby?",
+      "answer": "Nie, nasilenie objawów pod wpływem temperatury to jedynie reakcja organizmu na ciepło lub zimno, która nie oznacza rzutu choroby ani trwałego pogorszenia i zwykle ustępuje po schłodzeniu lub ogrzaniu ciała.",
+      "category": "objawy",
+      "link": "https://www.facebook.com/permalink.php?story_fbid=pfbid02Q8oHeD3FacNBVeKJbCtrZPiBexdwkDht39b6oQdRFwCWPhdMFgpwFSz1zeboTYDql&id=100068950606334",
+      "linktitle": "neurozmobilizowani.pl"
+    }
+
+]

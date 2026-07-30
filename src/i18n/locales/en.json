@@ -1,0 +1,172 @@
+{
+  "navbar": {
+    "logoPrefix": "SM",
+    "logoSuffix": "ap",
+    "search": "Search",
+    "aboutUs": "About us",
+    "seeReport": "See the report"
+  },
+  "app": {
+    "titlePrefix": "Question",
+    "titleEm": "search",
+    "searchPlaceholder": "Type what you're looking for…",
+    "countText": "{{filtered}} of {{total}} questions",
+    "emptyResults": "No questions match “{{query}}”. Try a different word.",
+    "source": "Source: {{linktitle}}",
+    "learnMore": "Learn more",
+    "previewTitle": "Preview: {{question}}"
+  },
+  "eventPage": {
+    "notFound": "Event not found",
+    "backHome": "← Back to homepage",
+    "back": "← Back"
+  },
+  "aboutUs": {
+    "eyebrow": "HerStory Project",
+    "heading": "SMap",
+    "intro": "Helping patients diagnosed with multiple sclerosis through the ethical use of artificial intelligence.",
+    "byline": "Dominika Bomba & Paulina Święcicka",
+    "stats": {
+      "months": "months",
+      "monthsLine2": "of work",
+      "experts": "experts",
+      "expertsLine2": "involved",
+      "hours": "hours",
+      "hoursLine2": "of consultations",
+      "comments": "comments",
+      "commentsLine2": "analyzed"
+    },
+    "partnersText": "Project carried out as part of HerStory in cooperation with the Girls Future Ready foundation and Roche Polska.",
+    "partnerAlt1": "Roche logo",
+    "partnerAlt2": "Girls Future Ready logo",
+    "whatWeDo": {
+      "headingPrefix": "How we",
+      "headingEm": "work",
+      "readMore": "Read more →"
+    },
+    "reports": {
+      "headingPrefix": "What we",
+      "headingEm": "create",
+      "report": {
+        "label": "REPORT",
+        "downloadAriaLabel": "Download the report",
+        "titleBold": "Potential Areas Where Patients Diagnosed with MS Can Be Supported by AI",
+        "description": "— a report based on more than 13 interviews with Roche experts in neurology, artificial intelligence, and communications."
+      },
+      "analysis": {
+        "label": "ANALYSIS",
+        "ariaLabel": "Information about access to the analysis",
+        "contactInfo": "Access to the analysis is restricted — please contact us by email:",
+        "description": "An analysis of around 3,000 anonymized comments from the MS community: what patients talk about, what they're looking for, and what worries them. Available to selected organizations."
+      },
+      "search": {
+        "label": "SEARCH",
+        "ariaLabel": "Go to the search tool",
+        "description": "A collection of real questions from the MS community together with answers, in the form of a simple search tool. Available to patients."
+      }
+    },
+    "aboutMe": {
+      "heading": "About us",
+      "person1Name": "Dominika Bomba",
+      "person1Bio": "I’ve always loved logical thinking and algorithmic problem-solving, as it was my way of being creative. This creativity has remained with me throughout the years, and although I’m not great at typical “artsy” things, I find technology and programming truly captivating tools that enable me to create and fascinate me. When I strongly believe in something, I fervently dedicate myself to it and work day and night until it comes to life. For me, community is vital. Oh, and I love traveling!",
+      "person2Name": "Paulina Święcicka",
+      "person2Bio": "Paulina Święcicka holds a leadership role at Roche as the Global Head of Data Management and Data Quality Platforms (previously serving as Head of Data Engineering, among other roles). She is responsible for driving enterprise data management, data quality, and AI-driven software innovations supporting R&D operations. Additionally, she is actively involved in digital transformation initiatives and empowering women in the technology sector.",
+      "photoAlt": "photo"
+    },
+    "values": {
+      "headingPrefix": "Our",
+      "headingEm": "values",
+      "ethics": {
+        "title": "Ethical use of AI",
+        "text": "We thoroughly verify and review AI analyses while fully protecting privacy."
+      },
+      "accessibility": {
+        "title": "Accessible to everyone",
+        "text": "We build tools that are easy for anyone to use and understand"
+      },
+      "reliability": {
+        "title": "Reliability",
+        "text": "We rely solely on hard data and the knowledge of medical experts"
+      },
+      "cooperation": {
+        "title": "Collaboration",
+        "text": "We connect generations (through mentoring!), technology, and medicine."
+      }
+    },
+    "journey": {
+      "heading": "How did it all start?",
+      "march": {
+        "month": "March",
+        "alt": "March",
+        "title": "The beginning",
+        "text": "First meeting at the Roche office right after recruitment, and the start of a shared adventure."
+      },
+      "aprilMay": {
+        "month": "April – May",
+        "alt": "April - May",
+        "title": "Interviews",
+        "text": "We conducted more than 13 interviews with experts (neurology, UX, AI), which pointed to the need for social media analysis."
+      },
+      "may": {
+        "month": "May",
+        "alt": "May",
+        "title": "Analysis",
+        "text": "We carried out a large analysis of anonymized community conversations: qualitative, quantitative, and sentiment."
+      },
+      "june": {
+        "month": "June",
+        "alt": "June",
+        "title": "Report publication",
+        "text": "Combining patients' voices, expert knowledge, and data into a single resource."
+      },
+      "july": {
+        "month": "Since June",
+        "alt": "Since June",
+        "title": "Outreach",
+        "text": "Sharing the resources we've developed and the story of our mentoring journey."
+      }
+    }
+  },
+  "events": {
+    "ptpn": {
+      "tag": "on 10.02.2026!",
+      "title": "A talk at the National Conference of Neurological Nurses",
+      "alt": "photo from the nursing conference",
+      "short": "In October 2026, Dominika will talk about the ethical use of LLMs and patient data privacy.",
+      "full": [
+        "At the National Conference of Neurological Nurses, Dominika will talk about the ethical and correct use of large language models (LLMs) in patient care.",
+        "The talk will focus on data privacy and security — what needs to be kept in mind before any patient information is passed to an AI tool. It's an important topic for a community that works closest with people living with MS every day."
+      ]
+    },
+    "gfr": {
+      "tag": "join us on 07.31.2026 :)",
+      "title": "We're organizing the finale of the HerStory project by Girls Future Ready",
+      "alt": "photo from the gfr conference",
+      "short": "On July 31, 2026, we'll run a workshop for young women on technology in medicine at the finale of the HerStory program — using our project as an example.",
+      "full": [
+        "At the finale of the Girls Future Ready foundation's HerStory program, we'll lead a workshop on technology in medicine — using our project as an example.",
+        "We'll focus on artificial intelligence: showing participants how to go from an idea to a working tool, and how to do it ethically. It's also a chance to tell the story of the mentoring that gave rise to this project."
+      ]
+    },
+    "hba": {
+      "tag": "06.15.2026 - HBA Warsaw Branch",
+      "title": "A talk at the \"The Power of Mentoring\" meeting by HBA",
+      "alt": "photo from the HBA conference",
+      "short": "Our project at the \"The Power of Mentoring\" meeting — on what comes out of combining mentoring, collaboration, and AI.",
+      "full": [
+        "At the \"The Power of Mentoring\" meeting, organized by the Warsaw branch of the Healthcare Businesswomen's Association, Roche Polska, the Business Women Leaders Foundation, and Girls Future Ready joined forces.",
+        "We presented our project there as an example of what can emerge from the combination of collaboration, mentoring, and artificial intelligence. We showed how a mentoring relationship can give rise to a real tool that supports patients with multiple sclerosis."
+      ]
+    },
+    "smicoztego": {
+      "tag": "05.22-24.2026 Patient conference",
+      "title": "We attended the \"MS – so what?\" conference",
+      "alt": "photo from the SM - i co z tego? conference",
+      "short": "We took part in the expert day and the patient days of the National Conference",
+      "full": [
+        "Dominika took part in the expert day and the patient days of the National Conference \"MS – so what?\" — one of the largest events in Poland dedicated to multiple sclerosis.",
+        "It was an opportunity to hear firsthand which questions and problems truly concern patients — from diagnosis, through treatment, to everyday life with MS. The insights gathered fed into our question search tool and helped us better understand the community's needs."
+      ]
+    }
+  }
+}

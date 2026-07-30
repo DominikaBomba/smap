@@ -55,6 +55,32 @@
     text-underline-offset: 4px;
 }
 
+.siteNavRight {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+/* przycisk zmiany języka */
+.langSwitch {
+    padding: 8px 14px;
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    background: transparent;
+    color: var(--navy-deep);
+    border: 1px solid var(--navy-deep);
+    border-radius: 999px;
+    cursor: pointer;
+    transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.langSwitch:hover {
+    background-color: var(--navy-deep);
+    color: var(--cream-on-navy);
+}
+
 /* owalny przycisk CTA z obrysem */
 .siteNavCta {
     padding: 9px 20px;
@@ -82,5 +108,9 @@
         justify-content: center;
         gap: 14px;
         padding: 14px 20px;
+    }
+
+    .siteNavRight {
+        gap: 10px;
     }
 }

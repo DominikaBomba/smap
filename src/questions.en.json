@@ -1,0 +1,158 @@
+[
+  {
+    "id": 1,
+    "question": "What is multiple sclerosis and who does it most often affect?",
+    "answer": "Multiple sclerosis (MS) is a disease of the central nervous system, affecting the brain and spinal cord. It most often appears in young people — between the ages of 20 and 40. Women develop MS 2 to 3 times more often than men.",
+    "category": "diagnosis and symptoms",
+    "link": "https://www.youtube.com/watch?v=PPGCci6O0Sg",
+    "linktitle": "Wiedza Pacjenta"
+  },
+  {
+    "id": 2,
+    "question": "Can someone with MS work a normal job?",
+    "answer": "Yes, most people with MS continue working, especially when treatment is started early. Small adjustments can sometimes help, such as flexible working hours or remote work during periods of worse wellbeing.",
+    "category": "general"
+  },
+  {
+    "id": 3,
+    "question": "How should I prepare for a neurologist appointment?",
+    "answer": "It's worth writing down your symptoms in advance (when they appeared, how long they lasted), a list of the medications you take, and the questions you want to ask. It's also a good idea to bring documentation from previous tests, such as MRI results.",
+    "category": "general"
+  },
+  {
+    "id": 4,
+    "question": "Does giving up gluten help with multiple sclerosis (MS)?",
+    "answer": "There is currently no reliable scientific evidence that routinely eliminating gluten improves the course of multiple sclerosis.",
+    "category": "diet",
+    "link": "https://www.facebook.com/share/r/1BdtsrsYdw/"
+  },
+  {
+    "id": 5,
+    "question": "When should a person with MS follow a gluten-free diet?",
+    "answer": "A gluten-free diet is only necessary for people with celiac disease or a confirmed gluten sensitivity.",
+    "category": "diet",
+    "link": "https://www.facebook.com/share/r/1BdtsrsYdw/",
+    "linktitle": "Fundacja StwardnienieRozsiane.info"
+  },
+  {
+    "id": 6,
+    "question": "What are the risks of unnecessarily eliminating gluten from the diet?",
+    "answer": "Unnecessary gluten elimination can lead to deficiencies in fiber, B vitamins, and certain minerals.",
+    "category": "diet",
+    "link": "https://www.facebook.com/share/r/1BdtsrsYdw/",
+    "linktitle": "Fundacja StwardnienieRozsiane.info"
+  },
+  {
+    "id": 7,
+    "question": "What diet is most recommended for people with MS?",
+    "answer": "For people with MS, what matters most is a well-balanced diet based on current guidelines, rather than eliminating gluten without a clear medical indication.",
+    "category": "diet",
+    "link": "https://www.facebook.com/share/r/1BdtsrsYdw/",
+    "linktitle": "Fundacja StwardnienieRozsiane.info"
+  },
+  {
+    "id": 8,
+    "question": "Can and should women with multiple sclerosis breastfeed?",
+    "answer": "Yes, breastfeeding is definitely recommended for patients with multiple sclerosis, and women should breastfeed during this period.",
+    "category": "motherhood",
+    "link": "https://www.youtube.com/watch?v=E6ZCglkO-BM",
+    "linktitle": "Neurozmobilizowani.pl"
+  },
+  {
+    "id": 9,
+    "question": "Can patients with MS take medication while breastfeeding?",
+    "answer": "Yes, there are plenty of medications that can be used by breastfeeding mothers with multiple sclerosis.",
+    "category": "motherhood",
+    "link": "https://www.youtube.com/watch?v=E6ZCglkO-BM",
+    "linktitle": "Neurozmobilizowani.pl"
+  },
+  {
+    "id": 10,
+    "question": "What health benefits does breastfeeding offer a woman with MS?",
+    "answer": "Breastfeeding reduces the later effect of osteoporosis, lowers the risk of postpartum depression and breast cancer, and — crucially — reduces the risk of a disease relapse in the postpartum period by one third.",
+    "category": "motherhood",
+    "link": "https://www.youtube.com/watch?v=E6ZCglkO-BM",
+    "linktitle": "Neurozmobilizowani.pl"
+  },
+  {
+    "id": 11,
+    "question": "What are the WHO recommendations regarding exclusive breastfeeding?",
+    "answer": "The World Health Organization (WHO) recommends that all mothers planning motherhood try to breastfeed their children exclusively for the first six months.",
+    "category": "motherhood",
+    "link": "https://www.youtube.com/watch?v=E6ZCglkO-BM",
+    "linktitle": "Neurozmobilizowani.pl"
+  },
+  {
+    "id": 12,
+    "question": "Does a woman with multiple sclerosis (MS) have to give birth in a specialized hospital?",
+    "answer": "No, multiple sclerosis and pregnancy are not a contraindication to being cared for and giving birth in a regular hospital with a gynecology and obstetrics ward.",
+    "category": "motherhood",
+    "link": "https://www.youtube.com/watch?v=C96KR6Qg67w",
+    "linktitle": "Neurozmobilizowani.pl"
+  },
+  {
+    "id": 13,
+    "question": "Is multiple sclerosis a contraindication to natural childbirth?",
+    "answer": "Multiple sclerosis on its own is not a contraindication to natural childbirth. The only contraindications are direct obstetric complications during the birth itself and the patient's degree of disability.",
+    "category": "motherhood",
+    "link": "https://www.youtube.com/watch?v=C96KR6Qg67w",
+    "linktitle": "Neurozmobilizowani.pl"
+  },
+  {
+    "id": 14,
+    "question": "Can women with MS use pain relief during childbirth?",
+    "answer": "Yes, patients giving birth naturally can use pain relief to ease labor pain just like any other woman. For a cesarean section, general anesthesia is not required — epidural or spinal anesthesia can be used instead.",
+    "category": "motherhood",
+    "link": "https://www.youtube.com/watch?v=C96KR6Qg67w",
+    "linktitle": "Neurozmobilizowani.pl"
+  },
+  {
+    "id": 15,
+    "question": "What causes multiple sclerosis to develop?",
+    "answer": "The causes of multiple sclerosis are not fully understood, but autoimmune factors are believed to play a major role — it is generally considered to be an autoimmune disease.",
+    "category": "diagnosis and symptoms",
+    "link": "https://www.youtube.com/watch?v=PPGCci6O0Sg",
+    "linktitle": "Wiedza pacjenta"
+  },
+  {
+    "id": 16,
+    "question": "What are the most common symptoms of primary progressive multiple sclerosis (PPMS)?",
+    "answer": "The most common first symptom is a gradually worsening weakness (paraparesis) of the lower limbs, showing up as difficulty walking. It is often accompanied by lower back pain due to strain. The second most common symptom is problems with balance and movement coordination (cerebellar disturbances), as well as bladder issues (mainly with urination) and erectile dysfunction in men.",
+    "category": "diagnosis and symptoms",
+    "link": "https://www.youtube.com/watch?v=BvpyIYvWv0E",
+    "linktitle": "Wiedza pacjenta"
+  },
+  {
+    "id": 20,
+    "question": "What causes temperature sensitivity in people with multiple sclerosis?",
+    "answer": "It results from damage to the myelin sheaths of the nerves. When body temperature rises or falls, nerve impulse conduction becomes less efficient, which temporarily worsens neurological symptoms. However, this does not mean a disease relapse or permanent worsening.",
+    "category": "symptoms",
+    "link": "https://www.facebook.com/permalink.php?story_fbid=pfbid02Q8oHeD3FacNBVeKJbCtrZPiBexdwkDht39b6oQdRFwCWPhdMFgpwFSz1zeboTYDql&id=100068950606334",
+    "linktitle": "neurozmobilizowani.pl",
+    "embedUrl": "https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fpermalink.php%3Fstory_fbid%3Dpfbid02Q8oHeD3FacNBVeKJbCtrZPiBexdwkDht39b6oQdRFwCWPhdMFgpwFSz1zeboTYDql%26id%3D100068950606334&show_text=true&width=500"
+  },
+  {
+    "id": 21,
+    "question": "How do high temperatures affect the body of a person with MS?",
+    "answer": "Heat, stuffy rooms, hot baths, or intense exercise can worsen fatigue, balance and coordination problems, muscle weakness, vision disturbances, difficulty concentrating, and pain.",
+    "category": "symptoms",
+    "link": "https://www.facebook.com/permalink.php?story_fbid=pfbid02Q8oHeD3FacNBVeKJbCtrZPiBexdwkDht39b6oQdRFwCWPhdMFgpwFSz1zeboTYDql&id=100068950606334",
+    "linktitle": "neurozmobilizowani.pl"
+  },
+  {
+    "id": 22,
+    "question": "How does cold and low temperatures affect people with MS?",
+    "answer": "Low temperatures can worsen spasticity and muscle stiffness, nerve pain, difficulty moving, feelings of fatigue, and lower mood.",
+    "category": "symptoms",
+    "link": "https://www.facebook.com/permalink.php?story_fbid=pfbid02Q8oHeD3FacNBVeKJbCtrZPiBexdwkDht39b6oQdRFwCWPhdMFgpwFSz1zeboTYDql&id=100068950606334",
+    "linktitle": "neurozmobilizowani.pl"
+  },
+  {
+    "id": 23,
+    "question": "Does a worsening of symptoms due to temperature mean a disease relapse?",
+    "answer": "No, a worsening of symptoms due to temperature is only the body's reaction to heat or cold. It does not mean a disease relapse or permanent worsening, and it usually goes away once the body cools down or warms up.",
+    "category": "symptoms",
+    "link": "https://www.facebook.com/permalink.php?story_fbid=pfbid02Q8oHeD3FacNBVeKJbCtrZPiBexdwkDht39b6oQdRFwCWPhdMFgpwFSz1zeboTYDql&id=100068950606334",
+    "linktitle": "neurozmobilizowani.pl"
+  }
+]

@@ -1,0 +1,173 @@
+{
+  "navbar": {
+    "logoPrefix": "SM",
+    "logoSuffix": "ap",
+    "search": "Wyszukiwarka",
+    "aboutUs": "O nas",
+    "seeReport": "Zobacz raport"
+  },
+  "app": {
+    "titlePrefix": "Wyszukiwarka",
+    "titleEm": "pytań",
+    "searchPlaceholder": "Wpisz, czego szukasz…",
+    "countText": "{{filtered}} z {{total}} pytań",
+    "emptyResults": "Brak pytań pasujących do „{{query}}”. Spróbuj innego słowa.",
+    "source": "Źródło: {{linktitle}}",
+    "learnMore": "Dowiedz się więcej",
+    "previewTitle": "Podgląd: {{question}}"
+  },
+  "eventPage": {
+    "notFound": "Nie znaleziono wydarzenia",
+    "backHome": "← Wróć na stronę główną",
+    "back": "← Wróć"
+  },
+  "aboutUs": {
+    "eyebrow": "Projekt HerStory",
+    "heading": "SMap",
+    "intro": "Pomoc pacjentom ze stwardnieniem rozsianym poprzez etyczne wykorzystanie sztucznej inteligencji.",
+    "byline": "Dominika Bomba & Paulina Święcicka",
+    "stats": {
+      "months": "miesiące",
+      "monthsLine2": "pracy",
+      "experts": "zaangażowanych",
+      "expertsLine2": "ekspertów",
+      "hours": "godzin",
+      "hoursLine2": "konsultacji",
+      "comments": "przeanalizowanych",
+      "commentsLine2": "komentarzy"
+    },
+    "partnersText": "Projekt realizowany w ramach HerStory we współpracy fundacji Girls Future Ready oraz Roche Polska.",
+    "partnerAlt1": "Roche logo",
+    "partnerAlt2": "Girls Future Ready logo",
+    "whatWeDo": {
+      "headingPrefix": "Tak",
+      "headingEm": "działamy",
+      "readMore": "Czytaj więcej →"
+    },
+    "reports": {
+      "headingPrefix": "Co",
+      "headingEm": "tworzymy",
+      "report": {
+        "label": "RAPORT",
+        "downloadAriaLabel": "Pobierz raport",
+        "titleBold": "Potential Areas Where Patients Diagnosed with MS Can Be Supported by AI",
+        "description": "— raport oparty na ponad 13 wywiadach z ekspertami Roche z neurologii, sztucznej inteligencji i komunikacji."
+      },
+      "analysis": {
+        "label": "ANALIZA",
+        "ariaLabel": "Informacja o dostępie do analizy",
+        "contactInfo": "Dostęp do analizy jest ograniczony — prosimy o kontakt mailowy:",
+        "description": "Analiza około 3000 zanonimizowanych komentarzy społeczności SM: o czym pacjenci rozmawiają, czego szukają i co ich niepokoi. Dostępna dla wybranych organizacji."
+      },
+      "search": {
+        "label": "WYSZUKIWARKA",
+        "ariaLabel": "Przejdź do wyszukiwarki",
+        "description": "Zbiór prawdziwych pytań społeczności SM wraz z odpowiedziami, w formie prostej wyszukiwarki. Dostępna dla pacjentów."
+      }
+    },
+    "aboutMe": {
+      "heading": "O nas",
+      "person1Name": "Dominika Bomba",
+      "person1Bio": "Zawsze uwielbiałam logiczne myślenie i rozwiązywanie problemów algorytmicznych — to był mój sposób na bycie kreatywną. Ta kreatywność została ze mną przez lata i choć nie jestem dobra w typowych rzeczach „artystycznych”, to właśnie technologia i programowanie są dla mnie naprawdę fascynującymi narzędziami, które pozwalają mi tworzyć i które mnie zachwycają. Kiedy w coś mocno wierzę, oddaję się temu całkowicie i pracuję dniami i nocami, aż to ożyje. Dla mnie społeczność jest kluczowa. A, i uwielbiam podróżować!",
+      "person2Name": "Paulina Święcicka",
+      "person2Bio": "Paulina Święcicka pełni funkcję kierowniczą w Roche jako Global Head of Data Management and Data Quality Platforms (wcześniej m.in. Head of Data Engineering). Odpowiada za rozwój zarządzania danymi na poziomie całej organizacji, jakość danych oraz innowacje w oprogramowaniu opartym na AI wspierające działania R&D. Dodatkowo aktywnie angażuje się w inicjatywy transformacji cyfrowej oraz działania na rzecz wzmacniania pozycji kobiet w sektorze technologicznym.",
+
+      "photoAlt": "zdjęcie"
+    },
+    "values": {
+      "headingPrefix": "Nasze",
+      "headingEm": "wartości",
+      "ethics": {
+        "title": "Etyczne użycie AI",
+        "text": "Szczegółowo werfikujemy i konsultujemy analizy sztucznej inteligencji w pełni dbając o prywatność."
+      },
+      "accessibility": {
+        "title": "Dostępność dla każdego",
+        "text": "Tworzymy narzędzia łatwych do użycia i zrozumienia przez każdego"
+      },
+      "reliability": {
+        "title": "Rzetelność",
+        "text": "Opieramy się jedynie na twardych danych oraz wiedzy ekspertów medycznych"
+      },
+      "cooperation": {
+        "title": "Współpraca",
+        "text": "Łączymy pokolenia (poprzez mentoring!), technologie i medycynę."
+      }
+    },
+    "journey": {
+      "heading": "Jak to się zaczeło?",
+      "march": {
+        "month": "Marzec",
+        "alt": "Marzec",
+        "title": "Początek",
+        "text": "Pierwsze spotkanie w biurze Roche tuż po rekrutacji i początek wspólnej przygody."
+      },
+      "aprilMay": {
+        "month": "Kwiecień – Maj",
+        "alt": "Kwiecień - Maj",
+        "title": "Wywiady",
+        "text": "Przeprowadzenie ponad 13 wywiadów z ekspertami (neurologia, UX, AI), które wskazały potrzebę analizy social mediów."
+      },
+      "may": {
+        "month": "Maj",
+        "alt": "Maj",
+        "title": "Analiza",
+        "text": "Przeprowadzenie dużej analizy zanonimizowanych rozmów społeczności: jakościowej, ilościowej i sentymentu."
+      },
+      "june": {
+        "month": "Czerwiec",
+        "alt": "Czerwiec",
+        "title": "Publikacja raportu",
+        "text": "Połączenie głosu pacjentów, wiedzy eksperckiej i danych w jeden zasób."
+      },
+      "july": {
+        "month": "Od czerwca",
+        "alt": "Od czerwca",
+        "title": "Promocja",
+        "text": "Dzielenie się wypracowanymi zasobami i historią naszego mentoringu."
+      }
+    }
+  },
+  "events": {
+    "ptpn": {
+      "tag": "już 02.10.2026!",
+      "title": "Wystąpienie podczas Ogólnopolskiej Konferencji Pielęgniarek Neurologicznych",
+      "alt": "photo from the nursing conference",
+      "short": "Już w październiku 2026 roku Dominika opowie o etycznym korzystaniu z LLM-ów oraz prywatności danych pacjentów.",
+      "full": [
+        "Na Ogólnopolskiej Konferencji Pielęgniarek Neurologicznych Dominika opowie o etycznym i prawidłowym korzystaniu z dużych modeli językowych (LLM) w opiece nad pacjentem.",
+        "W centrum wystąpienia znajdą się prywatność i bezpieczeństwo danych — czyli to, o czym trzeba pamiętać, zanim jakiekolwiek informacje o pacjencie trafią do narzędzia AI. To ważny temat w środowisku, które na co dzień jest najbliżej osób z SM."
+      ]
+    },
+    "gfr": {
+      "tag": "31.07.2026 zapraszamy:)",
+      "title": "Organizujemy finał projektu Herstory by Girls Future Ready ",
+      "alt": "photo from the gfr conference",
+      "short": "31 lipca 2026 roku przeprowadzimy warsztaty dla młodych kobiet o technologii w medycynie na finale programu HerStory - na przykładzie naszego projektu.",
+      "full": [
+        "Podczas finału programu HerStory fundacji Girls Future Ready poprowadzimy warsztaty o technologii w medycynie — na przykładzie naszego projektu.",
+        "Skupimy się na sztucznej inteligencji: pokażemy uczestniczkom, jak przejść od pomysłu do działającego narzędzia i jak robić to w sposób etyczny. To także okazja, by opowiedzieć historię mentoringu, z którego ten projekt wyrósł."
+      ]
+    },
+    "hba": {
+      "tag": "15.06.2026 - HBA Warsaw Branch",
+      "title": "Wystąpienie na spotkaniu ”The Power of Mentoring” by HBA",
+      "alt": "photo from the HBA conference",
+      "short": "Nasz projekt na spotkaniu „The Power of Mentoring” — o tym, co powstaje z połączenia mentoringu, współpracy i AI.",
+      "full": [
+        "Podczas spotkania „The Power of Mentoring”, zorganizowanego przez warszawski oddział Healthcare Businesswomen's Association, siły połączyły Roche Polska, Fundacja Liderek Biznesu i Girls Future Ready.",
+        "Zaprezentowałyśmy tam nasz projekt jako przykład tego, co powstaje z połączenia współpracy, mentoringu i sztucznej inteligencji. Pokazałyśmy, jak z relacji mentorskiej może narodzić się realne narzędzie wspierające pacjentów ze stwardnieniem rozsianym."
+      ]
+    },
+    "smicoztego": {
+      "tag": "22-24.05.2026 Konferencja pacjencka",
+      "title": "Byłyśmy na konferencji „SM – i co z tego?”",
+      "alt": "photo from the SM - i co z tego? conference",
+      "short": "Wziełyśmy udział w dniu eksperckim i dniach pacjenckich Ogólnopolskiej Konferencji",
+      "full": [
+        "Dominika wzięła udział w dniu eksperckim oraz dniach pacjenckich Ogólnopolskiej Konferencji „SM – i co z tego?” — jednego z największych w Polsce wydarzeń poświęconych stwardnieniu rozsianemu.",
+        "To była okazja, by usłyszeć na żywo, jakie pytania i problemy naprawdę nurtują pacjentów — od diagnozy, przez leczenie, po codzienność z SM. Zebrane wnioski zasiliły naszą wyszukiwarkę pytań i pomogły lepiej zrozumieć potrzeby społeczności."
+      ]
+    }
+  }
+}
