@@ -1,6 +1,7 @@
 import { Link, NavLink } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import "./Navbar.css";
+import raport from "./assets/Raport_do_smap.pdf";
 
 /* Górna nawigacja w stylu referencji:
    logo z szeryfową kursywą | linki w monospace | owalny przycisk CTA */
@@ -34,9 +35,9 @@ function Navbar() {
                     {i18n.language === "pl" ? "EN" : "PL"}
                 </button>
 
-                {/* podmień href, gdy raport będzie miał swój adres */}
-                <a className="siteNavCta" href="#">
-                    {t("navbar.seeReport")}
+
+                <a className="siteNavCta" href={raport} download aria-label={t("aboutUs.reports.report.downloadAriaLabel")}>
+                    <span className="material-symbols-outlined">see the report</span>
                 </a>
             </div>
         </nav>
