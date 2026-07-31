@@ -37,7 +37,7 @@ function Navbar() {
 
 
                 <a className="siteNavCta" href={raport} download aria-label={t("aboutUs.reports.report.downloadAriaLabel")}>
-                    <span className="material-symbols-outlined">see the report</span>
+                    <span>see the report</span>
                 </a>
             </div>
         </nav>
