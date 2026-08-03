@@ -1,7 +1,6 @@
 import { Link, NavLink } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import "./Navbar.css";
-import raport from "./assets/Raport_do_smap.pdf";
 
 /* Górna nawigacja w stylu referencji:
    logo z szeryfową kursywą | linki w monospace | owalny przycisk CTA */
@@ -14,6 +13,7 @@ function Navbar() {
     };
 
     return (
+        <div className="navbar">
         <nav className="siteNav">
             <Link to="/aboutUs" className="siteNavLogo">
                 <em>{t("navbar.logoPrefix")}</em>{t("navbar.logoSuffix")}
@@ -35,12 +35,29 @@ function Navbar() {
                     {i18n.language === "pl" ? "EN" : "PL"}
                 </button>
 
-
-                <a className="siteNavCta" href={raport} download aria-label={t("aboutUs.reports.report.downloadAriaLabel")}>
-                    see the report
+                {/* podmień href, gdy raport będzie miał swój adres */}
+                <a className="siteNavCta" href="#">
+                    {t("navbar.seeReport")}
                 </a>
             </div>
+
         </nav>
+            <div className="remember">
+                <div className="rememberRow">
+                    <span className="rememberIcon" aria-hidden="true">⚠</span>
+                    <p className="rememberText">
+                        <strong>Ostatnia aktualizacja: 01.08.2026</strong> — Informacje medyczne zmieniają się bardzo dynamicznie. Dane prezentowane mogą być nieaktualne w przyszłości. Nie ponosimy odpowiedzialności za decyzje podjęte na podstawie tych danych. Zawsze konsultuj się z lekarzem.
+                    </p>
+                </div>
+                <div className="rememberRow">
+                    <span className="rememberIcon" aria-hidden="true">⚠</span>
+                    <p className="rememberText">
+                        <strong>Last update: 01.08.2026</strong> — Medical information changes very dynamically. The data presented may become outdated in the future. We are not responsible for decisions made based on this data. Always consult a doctor.
+                    </p>
+                </div>
+            </div>
+
+            </div>
     );
 }
 

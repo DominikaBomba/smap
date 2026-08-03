@@ -19,7 +19,15 @@ function App() {
     )
 
     return (
-        <main className="faq">
+        <>
+
+
+    <main className="faq">
+
+
+
+
+
             <h1>{t('app.titlePrefix')} <em>{t('app.titleEm')}</em></h1>
 
             <input
@@ -84,6 +92,7 @@ function App() {
                 )}
             </div>
         </main>
+            </>
     )
 }
 

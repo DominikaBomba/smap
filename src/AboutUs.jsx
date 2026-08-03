@@ -13,7 +13,7 @@ import june from './assets/june.jpeg';
 import july from './assets/july.jpeg';
 import dominika from './assets/dominika.jpg';
 import paulina from './assets/paulina.png';
-import raport from './assets/Raport_do_smap.pdf'
+
 
 
 function CountUp({ end, prefix = "", suffix = "", duration = 1500 }) {
@@ -78,7 +78,7 @@ function AboutUs() {
                 </div>
             </header>
 
-            {/* pasek statystyk i partnerów pod hero */}
+
             <section className="statsBar">
                 <div className={"headerNumbers"}>
                     <div>
@@ -135,7 +135,7 @@ function AboutUs() {
                 <div className="reportRow">
                     <h5>{t("aboutUs.reports.report.label")}</h5>
                     <div>
-                        <a href={raport} download aria-label={t("aboutUs.reports.report.downloadAriaLabel")}>
+                        <a href="./assets/" download="raport_Smap_june2026.pdf" aria-label={t("aboutUs.reports.report.downloadAriaLabel")}>
                             <span className="material-symbols-outlined">download</span>
                         </a>
                     </div>
@@ -150,10 +150,22 @@ function AboutUs() {
                 <div className="reportRow">
                     <h5>{t("aboutUs.reports.analysis.label")}</h5>
                     <div>
-                        <Link to="https://dominikabomba.github.io/MsReport/MSRaport.html" aria-label={t("aboutUs.reports.search.ariaLabel")}>
+                        <button
+                            type="button"
+                            className="iconButton"
+                            onClick={() => setShowContactInfo((prev) => !prev)}
+                            aria-label={t("aboutUs.reports.analysis.ariaLabel")}
+                        >
                             <span className="material-symbols-outlined">lock</span>
-                        </Link>
-
+                        </button>
+                        {showContactInfo && (
+                            <p className="contactInfo">
+                                {t("aboutUs.reports.analysis.contactInfo")}{" "}
+                                <a href="mailto:kontakt@twojadomena.pl">
+                                    ...
+                                </a>
+                            </p>
+                        )}
                     </div>
                     <div>
                         {t("aboutUs.reports.analysis.description")}
